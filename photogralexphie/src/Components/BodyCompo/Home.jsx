@@ -3,10 +3,10 @@ import { ArrayImg } from "./HomeImg/ArrayImg";
 
 export const Home = () => {
   return (
-    <body>
+    <div className="home-img-container">
       {ArrayImg.map((item, index) => {
         return <div key={index} className={item.class}></div>;
       })}
-    </body>
+    </div>
   );
 };

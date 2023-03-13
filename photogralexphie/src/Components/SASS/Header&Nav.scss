@@ -1,5 +1,9 @@
+@import "./Home/Home.scss";
+
 .header-container {
-  display: inline-block;
+  display: fixed;
+  overflow: hidden;
+  margin-top: 0;
   background-color: rgba(1, 1, 1, 0.6);
   width: 100vw;
 }
@@ -10,15 +14,25 @@ h1 {
   text-align: center;
 }
 
-/*.navbar-container {
-  margin: 20px;
-  background-color: red;
-  width: 90vw;
-}*/
+.material-symbols-outlined {
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+  left: 45%;
+}
+
+#arrow-menu-up {
+  display: none;
+  top: 200px;
+}
+
+#arrow-menu-down {
+  display: block;
+  top: 62px;
+}
 
 .ul-menu {
-  background-color: green;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   height: 15vh;
 }

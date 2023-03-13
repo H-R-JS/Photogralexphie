@@ -1,4 +1,4 @@
-import "../src/Components/SASS/Home.scss";
+import "../src/Components/SASS/Header&Nav.scss";
 import { PHTGRouter } from "./Components/Router/PHTGRouter";
 import { Header } from "./Components/HeadCompo/Header";
 

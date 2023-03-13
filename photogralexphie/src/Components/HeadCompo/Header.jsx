@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "./Nav/Navbar";
+import { motion, useAnimation } from "framer-motion";
 
 export const Header = () => {
   return (
