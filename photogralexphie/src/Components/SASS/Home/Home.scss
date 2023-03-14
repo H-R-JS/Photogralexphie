@@ -1,7 +1,8 @@
 @import "./ArrayImg.scss";
 
 .home-img-container {
-  position: absolute;
   top: 0px;
+  width: 100vw;
+  height: 500px;
   z-index: -1;
 }

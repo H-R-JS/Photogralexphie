@@ -1,19 +1,27 @@
 .home-img {
-  background-size: 100%;
-  background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
 }
+/*
+.home-img:nth-child(odd) {
+  background-repeat: no-repeat;
+  background-size: 390px 600px;
+  width: 100vw;
+  height: 72vh;
+}*/
 
-.section-animals {
-  background-image: url(../../BodyCompo/HomeImg/Section_animal.jpg);
+/*.section-animals {
+  // background-image: url(../../BodyCompo/HomeImg/Section_animal_phone.jpg);
 }
 .section-solo {
   background-image: url(../../BodyCompo/HomeImg/Section_seul.jpg);
 }
 .section-couple {
-  background-image: url(../../BodyCompo/HomeImg/Section_couple.jpg);
+  background-image: url(../../BodyCompo/HomeImg/Section_couple_phone.jpg);
 }
 .section-event {
-  background-image: url(../../BodyCompo/HomeImg/Section_event.jpg);
+  background-image: url(../../BodyCompo/HomeImg/Section_event_phone.jpg);
+}*/
+
+h2 {
+  color: #fff;
 }
