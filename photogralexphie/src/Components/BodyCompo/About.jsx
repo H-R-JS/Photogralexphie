@@ -2,7 +2,7 @@ import React from "react";
 
 export const About = () => {
   return (
-    <div>
+    <section>
       <div className="about-img"></div>
       <div className="about-text">
         <p>
@@ -26,6 +26,6 @@ export const About = () => {
           photos.
         </p>
       </div>
-    </div>
+    </section>
   );
 };

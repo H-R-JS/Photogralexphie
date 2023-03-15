@@ -1,27 +1,12 @@
 .home-img {
-  width: 100vw;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  background-color: rgba(1, 1, 1, 0.5);
 }
-/*
-.home-img:nth-child(odd) {
-  background-repeat: no-repeat;
-  background-size: 390px 600px;
-  width: 100vw;
-  height: 72vh;
-}*/
-
-/*.section-animals {
-  // background-image: url(../../BodyCompo/HomeImg/Section_animal_phone.jpg);
-}
-.section-solo {
-  background-image: url(../../BodyCompo/HomeImg/Section_seul.jpg);
-}
-.section-couple {
-  background-image: url(../../BodyCompo/HomeImg/Section_couple_phone.jpg);
-}
-.section-event {
-  background-image: url(../../BodyCompo/HomeImg/Section_event_phone.jpg);
-}*/
 
 h2 {
   color: #fff;
+  background-color: rgba(1, 1, 1, 0.5);
+  width: 30vw;
+  padding: 20px;
 }

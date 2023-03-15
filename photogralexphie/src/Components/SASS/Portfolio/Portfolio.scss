@@ -1,0 +1,28 @@
+.portf-page {
+  display: grid;
+  grid-template-columns: repeat(2 40%);
+  position: absolute;
+  background-color: #181717;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.portf-img {
+}
+
+.grid-test {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.test {
+  grid-column: 2 /4;
+  background-color: red;
+}
+.test-bleu {
+  grid-row: 2 /5;
+  background-color: green;
+}
