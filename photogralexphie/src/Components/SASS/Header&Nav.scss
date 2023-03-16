@@ -1,18 +1,21 @@
 @import "./Home/Home.scss";
 @import "./Portfolio/Portfolio.scss";
+@import "./About.scss";
 
 .header-container {
   display: fixed;
   overflow: hidden;
   margin-top: 0;
-  background-color: rgba(1, 1, 1, 0.2);
   width: 100vw;
+  z-index: -1;
+  background-color: rgba(3, 3, 3, 0.4);
 }
 
 h1 {
   color: #fff;
   font-size: 38px;
   text-align: center;
+  font-family: "Dancing Script", cursive;
 }
 
 .material-symbols-outlined {
@@ -47,6 +50,8 @@ li {
   font-size: 26px;
   text-decoration: none;
   margin: 0 35px;
+  font-family: "Noto Serif Display", serif;
+  font-style: italic;
 }
 
 .link-menu::after {
