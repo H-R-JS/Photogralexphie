@@ -1,44 +1,39 @@
+@import "./index.scss";
 @import "./Home/Home.scss";
 @import "./Portfolio/Portfolio.scss";
 @import "./About.scss";
+@import "./Shooting.scss";
 
 .header-container {
-  display: fixed;
   overflow: hidden;
-  margin-top: 0;
   width: 100vw;
-  z-index: -1;
-  background-color: rgba(3, 3, 3, 0.4);
+  background-color: rgba(3, 3, 3, 0.5);
 }
 
 h1 {
   color: #fff;
-  font-size: 38px;
+  font-size: 30px;
   text-align: center;
-  font-family: "Dancing Script", cursive;
+  padding-bottom: 30px;
+  font-family: $main-font;
 }
 
 .material-symbols-outlined {
   position: absolute;
   color: #fff;
   font-size: 40px;
-  left: 45%;
-}
-
-#arrow-menu-up {
-  display: none;
-  top: 200px;
+  left: 50%;
 }
 
 #arrow-menu-down {
   display: block;
-  top: 62px;
+  top: 70px;
 }
 
 .ul-menu {
   display: none;
-  flex-wrap: wrap;
   height: 15vh;
+  margin: 0 10px;
 }
 
 li {
@@ -49,8 +44,8 @@ li {
   color: #fff;
   font-size: 26px;
   text-decoration: none;
-  margin: 0 35px;
-  font-family: "Noto Serif Display", serif;
+  margin: 0 20px;
+  font-family: $main-font;
   font-style: italic;
 }
 
