@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { NavItems } from "./NavItems";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -9,10 +9,28 @@ export const Navbar = () => {
   const iconToggle = useAnimation();
   let ref = useRef();
 
-  //const displayToggle
+  useEffect(() => {
+    const ClickOutTarget = (e) => {
+      if (!ref.current.contains(e.target)) {
+        menuToggle.start({
+          display: "none",
+        });
+        iconToggle.start({
+          display: "block",
+        });
+        console.log("clicked Outside");
+      } else {
+        console.log("clicked Inside");
+      }
+    };
+    document.addEventListener("click", ClickOutTarget);
+    return () => {
+      document.removeEventListener("click", ClickOutTarget);
+    };
+  }, []);
 
   return (
-    <nav>
+    <nav ref={ref}>
       <motion.span
         class="material-symbols-outlined"
         id="arrow-menu-down"
@@ -29,7 +47,7 @@ export const Navbar = () => {
       >
         menu
       </motion.span>
-      <motion.ul className="ul-menu" animate={menuToggle} ref={ref}>
+      <motion.ul className="ul-menu" animate={menuToggle}>
         {NavItems.map((item, index) => {
           return (
             <li key={index}>

@@ -4,16 +4,81 @@
 @import "./About.scss";
 @import "./Shooting.scss";
 
+@media screen and (max-width: 600px) {
+  .header-container {
+    overflow: hidden;
+    width: 100vw;
+    background-color: rgba(3, 3, 3, 0.5);
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: $main-font;
+  }
+
+  .material-symbols-outlined {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    left: 50%;
+  }
+
+  #arrow-menu-down {
+    display: block;
+    top: 70px;
+  }
+
+  .ul-menu {
+    display: none;
+    height: 15vh;
+    margin: 0 10px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .link-menu {
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: $main-font;
+    font-style: italic;
+  }
+
+  .link-menu::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: right;
+    transition: transform 0.25 ease-out;
+  }
+
+  .link-menu:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
 .header-container {
   overflow: hidden;
   width: 100vw;
-  background-color: rgba(3, 3, 3, 0.5);
+  // background-color: rgba(3, 3, 3, 0.5);
 }
 
 h1 {
-  color: #fff;
+  color: #111;
   font-size: 30px;
-  text-align: center;
+  text-align: left;
   padding-bottom: 30px;
   font-family: $main-font;
 }

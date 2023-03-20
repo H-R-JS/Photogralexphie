@@ -7,19 +7,11 @@ const image = require("../BodyCompo/HomeImg/Section_animal_phone.jpg");
 export const Home = () => {
   return (
     <div>
-      <Parallax pages={2.28} className="home-img-container" style={{}}>
+      <Parallax pages={4} className="home-img-container">
         {ArrayImg.map((item, index) => {
           return (
-            <ParallaxLayer
-              key={index}
-              offset={item.offset}
-              speed={0.5}
-              className={item.class}
-              style={item.style}
-            >
-              <ParallaxLayer speed={0.2}>
-                <h2 style={item.marge}>{item.title}</h2>
-              </ParallaxLayer>
+            <ParallaxLayer key={index} offset={item.offset} speed={0}>
+              <div className={item.class} />
             </ParallaxLayer>
           );
         })}
@@ -27,3 +19,6 @@ export const Home = () => {
     </div>
   );
 };
+/** <ParallaxLayer speed={0.2}>
+                <h2 style={item.marge}>{item.title}</h2>
+              </ParallaxLayer> */

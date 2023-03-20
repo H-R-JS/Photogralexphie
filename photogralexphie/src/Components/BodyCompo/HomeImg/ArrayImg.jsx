@@ -6,31 +6,17 @@ const image4 = require("../../BodyCompo/HomeImg/Section_event_phone.jpg");
 export const ArrayImg = [
   {
     title: "Animaux",
-    class: "home-img section-animals",
-    src: require("./Section_animal_phone.jpg"),
     offset: 0,
-    style: {
-      backgroundImage: `url(${image1})`,
-      backgroundSize: "395px 600px",
-      width: "100vw",
-      height: "72vh",
-    },
+    class: "home-img one",
     marge: { margin: "500px 140px" },
   },
   {
     title: "Portrait Seul",
-    class: "home-img section-solo",
-    src: require("./Section_seul.jpg"),
-    offset: 0.71,
-    style: {
-      backgroundImage: `url(${image2})`,
-      backgroundSize: "395px 700px",
-      textAlign: "center",
-      height: "80vh",
-    },
+    offset: 1,
+    class: "home-img two",
     marge: { margin: "600px 140px" },
   },
-  {
+  /*{
     title: "Portrait Couple",
     class: "home-img section-couple",
     src: require("./Section_couple_phone.jpg"),
@@ -55,5 +41,5 @@ export const ArrayImg = [
       height: "72vh",
     },
     marge: { margin: "680px 130px" },
-  },
+  },*/
 ];

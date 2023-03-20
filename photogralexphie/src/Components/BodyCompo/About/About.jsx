@@ -8,12 +8,10 @@ export const About = () => {
     <section className="about-page">
       <div className="about-content">
         <div className="about-img" />
-        <div>
+        <div className="about-text">
           <Link>
             <img src={instaIcon} className="insta-logo" />
           </Link>
-        </div>
-        <div className="about-text">
           <p>
             Je me présente je suis phototgraphe, et j'ai la passion de la
             photographi car j'aime les photos. Je me présente je suis
