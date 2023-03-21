@@ -28,6 +28,10 @@ export const Shooting = () => {
           );
         })}
       </div>
+      <div className="shooting-text normal">
+        Shooting
+        <br /> Normal :<br /> 30 €
+      </div>
       <div className="shooting-container event">
         {ArrayImgShootingE.map((item, index) => {
           console.log(item.img);
@@ -40,15 +44,9 @@ export const Shooting = () => {
           );
         })}
       </div>
-      <div className="shooting-text-container">
-        <div className="shooting-text normal">
-          Shooting
-          <br /> Normal :<br /> 30 €
-        </div>
-        <div className="shooting-text event">
-          Shooting
-          <br /> Evenement :<br /> 100 €
-        </div>
+      <div className="shooting-text event">
+        Shooting
+        <br /> Evenement :<br /> 100 €
       </div>
     </section>
   );

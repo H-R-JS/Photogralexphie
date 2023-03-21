@@ -1,22 +1,19 @@
 import React from "react";
 import { ArrayImg } from "./HomeImg/ArrayImg";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const image = require("../BodyCompo/HomeImg/Section_animal_phone.jpg");
 
 export const Home = () => {
   return (
-    <div>
-      <Parallax pages={4} className="home-img-container">
-        {ArrayImg.map((item, index) => {
-          return (
-            <ParallaxLayer key={index} offset={item.offset} speed={0}>
-              <div className={item.class} />
-            </ParallaxLayer>
-          );
-        })}
-      </Parallax>
-    </div>
+    <section>
+      <div className="home-container">
+        <div className="home-img-container one">
+          <div className="home-img one" />
+          <div className="home-img two" />
+          <div className="box-color" />
+        </div>
+      </div>
+    </section>
   );
 };
 /** <ParallaxLayer speed={0.2}>

@@ -7,16 +7,19 @@ export const Portfolio = () => {
       <div className="portf-container">
         {ArrayPortfImgH.map((item, index) => {
           return (
-            <img key={index} src={item.src} className="portf-img-horizontal" />
-          );
-        })}
-        {ArrayPortfImgV.map((item, index) => {
-          return (
-            <img key={index} src={item.src} className="portf-img-vertical" />
+            <div
+              key={index}
+              style={{ backgroundImage: `url(${item.src})` }}
+              className={item.class}
+            />
           );
         })}
       </div>
     </section>
   );
 };
-/** */
+/**{ArrayPortfImgV.map((item, index) => {
+          return (
+            <div key={index} src={item.src} className="portf-img vertical" />
+          );
+        })} */

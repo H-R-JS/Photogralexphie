@@ -70,24 +70,24 @@
 }
 
 .header-container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
-  width: 100vw;
+  width: 98.5vw;
+  top: 30px;
   // background-color: rgba(3, 3, 3, 0.5);
 }
 
 h1 {
-  color: #111;
-  font-size: 30px;
-  text-align: left;
-  padding-bottom: 30px;
+  color: #fff;
+  font-size: 40px;
   font-family: $main-font;
+  margin-left: 50px;
 }
 
 .material-symbols-outlined {
-  position: absolute;
-  color: #fff;
-  font-size: 40px;
-  left: 50%;
+  display: none;
 }
 
 #arrow-menu-down {
@@ -96,7 +96,9 @@ h1 {
 }
 
 .ul-menu {
-  display: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 31vw;
   height: 15vh;
   margin: 0 10px;
 }
@@ -109,7 +111,7 @@ li {
   color: #fff;
   font-size: 26px;
   text-decoration: none;
-  margin: 0 20px;
+  //margin: 0 20px;
   font-family: $main-font;
   font-style: italic;
 }
