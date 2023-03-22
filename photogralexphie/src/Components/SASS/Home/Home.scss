@@ -20,40 +20,19 @@
   }
 }
 
-.home-img-container {
-  display: grid;
-  grid-template-columns: 20px 65vw 20px 31vw 20px;
-  grid-template-rows: 20px 80vh 20px 1fr;
+.home-img-container.one {
   height: 100vh;
 }
 
 .home-img.one {
-  grid-area: 2/2/3/3;
+  //grid-area: 2/2/3/3;
   background-color: #fff;
   background-image: url("../../BodyCompo/HomeImg/Section_animal.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  width: 65vw;
-  height: 80vh;
-}
-
-.home-img.two {
-  grid-area: 2/4/3/5;
-  background-color: red;
-  background-image: url("../../BodyCompo/HomeImg/Section_animal0.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  width: 31vw;
-  height: 96vh;
-}
-
-.box-color {
-  grid-area: 4/2/5/3;
-  background: linear-gradient(to right, rgb(190, 90, 22) 90%, rgb(18, 34, 15));
-  width: 65vw;
-  height: 14vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 h2 {

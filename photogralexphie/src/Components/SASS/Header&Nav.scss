@@ -81,12 +81,13 @@
 
 h1 {
   color: #fff;
-  font-size: 40px;
-  font-family: $main-font;
-  margin-left: 50px;
+  font-size: 50px;
+  font-family: "Fasthand", cursive;
+  font-weight: 200;
+  margin-left: 80px;
 }
 
-.material-symbols-outlined {
+#menu-down {
   display: none;
 }
 
@@ -100,7 +101,7 @@ h1 {
   justify-content: space-evenly;
   width: 31vw;
   height: 15vh;
-  margin: 0 10px;
+  margin: 20px 15px;
 }
 
 li {
@@ -109,10 +110,10 @@ li {
 
 .link-menu {
   color: #fff;
-  font-size: 26px;
+  font-size: 36px;
   text-decoration: none;
   //margin: 0 20px;
-  font-family: $main-font;
+  font-family: "Satisfy", cursive;
   font-style: italic;
 }
 

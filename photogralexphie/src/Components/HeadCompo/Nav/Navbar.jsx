@@ -33,7 +33,7 @@ export const Navbar = () => {
     <nav ref={ref}>
       <motion.span
         class="material-symbols-outlined"
-        id="arrow-menu-down"
+        id="menu-down"
         animate={iconToggle}
         onClick={() => {
           menuToggle.start({
