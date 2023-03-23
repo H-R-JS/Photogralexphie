@@ -1,8 +1,16 @@
 /// VAR & MIXIN
 
 //$title-font: ;
-$main-font: "Noto Serif Display", serif;
-$main-background-color: #181717;
+$main-font: "Satisfy", cursive;
+$second-font: "Recursive", sans-serif;
+
+$main-background-color: rgb(185, 68, 26);
+
+@mixin img-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
 
 body {
   margin: 0;
@@ -11,5 +19,5 @@ body {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background-color: $main-background-color;
+  background-color: #181717;
 }

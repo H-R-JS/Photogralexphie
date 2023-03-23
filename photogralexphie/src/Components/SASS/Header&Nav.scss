@@ -50,7 +50,7 @@
     font-style: italic;
   }
 
-  .link-menu::after {
+  /*.link-menu::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -66,17 +66,17 @@
   .link-menu:hover::after {
     transform: scaleX(1);
     transform-origin: left;
-  }
+  }*/
 }
 
 .header-container {
+  //background-color: $main-background-color;
   position: fixed;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  width: 98.5vw;
-  top: 30px;
-  // background-color: rgba(3, 3, 3, 0.5);
+  width: 100vw;
+  height: 14vh;
 }
 
 h1 {
@@ -84,7 +84,7 @@ h1 {
   font-size: 50px;
   font-family: "Fasthand", cursive;
   font-weight: 200;
-  margin-left: 80px;
+  margin: 15px 80px;
 }
 
 #menu-down {
@@ -98,10 +98,10 @@ h1 {
 
 .ul-menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 31vw;
   height: 15vh;
-  margin: 20px 15px;
+  margin: 30px 60px;
 }
 
 li {
@@ -117,7 +117,7 @@ li {
   font-style: italic;
 }
 
-.link-menu::after {
+/*.link-menu::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -133,4 +133,4 @@ li {
 .link-menu:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-}
+}*/

@@ -20,26 +20,125 @@
   }
 }
 
-.home-img-container.one {
+.home-img-container {
   height: 100vh;
 }
 
-.home-img.one {
-  //grid-area: 2/2/3/3;
+.home-img-home {
   background-color: #fff;
   background-image: url("../../BodyCompo/HomeImg/Section_animal.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+  @include img-background;
   width: 100vw;
   height: 100vh;
 }
 
-h2 {
-  font-size: 40px;
-  font-family: $main-font;
+.home-content-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #fff;
-  background-color: rgba(1, 1, 1, 0.5);
-  width: 30vw;
-  padding: 20px;
+}
+
+.home-content-part-one {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  height: 50vh;
+  margin-top: 100px;
+}
+
+.part-one-text {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  h2 {
+    background-color: rgb(185, 68, 26);
+    font-size: 30px;
+    font-family: "Recursive", sans-serif;
+    font-style: extrabold;
+    padding: 10px;
+    padding-left: 25px;
+    border-radius: 20px;
+  }
+  p {
+    font-family: "Recursive", sans-serif;
+    font-size: 20px;
+    width: 18vw;
+    margin-left: 20px;
+  }
+}
+
+.part-one-img {
+  background-image: url("../../BodyCompo/About/profil_1.jpg");
+  @include img-background;
+  width: 20vw;
+  height: 60vh;
+}
+
+.span-descript {
+  position: absolute;
+  font-family: "Recursive", sans-serif;
+  right: 610px;
+  margin-top: 600px;
+}
+
+.home-content-part-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50vw;
+  height: 60vw;
+  margin-top: 0px;
+}
+
+.part-two-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  p {
+    text-align: center;
+    font-family: $second-font;
+    font-size: 26px;
+    width: 15vw;
+  }
+}
+.part-two-button {
+  background-color: rgb(185, 68, 26);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 30px;
+  font-family: $main-font;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0px 10px 0px rgb(134, 49, 18);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.part-two-button:hover {
+  transform: translateY(10px);
+  box-shadow: none;
+}
+
+.part-two-container-img {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.part-two-img {
+  width: 18vw;
+  height: 30vw;
+  @include img-background;
+}
+
+.part-two-img.one {
+  background-image: url("../../BodyCompo/HomeImg/Section_couple.jpg");
+}
+
+.part-two-img.two {
+  background-image: url("../../BodyCompo/HomeImg/Section_animal0.jpg");
+}
+.part-two-img.three {
+  background-image: url("../../BodyCompo/HomeImg/Section_seul.jpg");
 }

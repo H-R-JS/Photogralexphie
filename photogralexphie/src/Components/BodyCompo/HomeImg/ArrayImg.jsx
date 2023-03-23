@@ -1,4 +1,4 @@
-const image1 = require("../../BodyCompo/HomeImg/Section_animal_phone.jpg");
+/*const image1 = require("../../BodyCompo/HomeImg/Section_animal_phone.jpg");
 const image2 = require("../../BodyCompo/HomeImg/Section_seul.jpg");
 const image3 = require("../../BodyCompo/HomeImg/Section_couple_phone.jpg");
 const image4 = require("../../BodyCompo/HomeImg/Section_event_phone.jpg");
@@ -16,7 +16,7 @@ export const ArrayImg = [
     class: "home-img two",
     marge: { margin: "600px 140px" },
   },
-  /*{
+  {
     title: "Portrait Couple",
     class: "home-img section-couple",
     src: require("./Section_couple_phone.jpg"),
@@ -41,5 +41,5 @@ export const ArrayImg = [
       height: "72vh",
     },
     marge: { margin: "680px 130px" },
-  },*/
-];
+  },
+];*/
