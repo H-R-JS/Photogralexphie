@@ -4,5 +4,5 @@ export const NavItems = [
   { title: "Accueil", path: "/" },
   { title: "Portfolio", path: "/portfolio" },
   { title: "Shooting", path: "/shooting" },
-  { title: "About", path: "/about" },
+  { title: "Contact", path: "/contact" },
 ];

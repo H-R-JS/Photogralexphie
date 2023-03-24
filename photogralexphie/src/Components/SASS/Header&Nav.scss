@@ -1,7 +1,7 @@
 @import "./index.scss";
 @import "./Home/Home.scss";
 @import "./Portfolio/Portfolio.scss";
-@import "./About.scss";
+@import "./Contact.scss";
 @import "./Shooting.scss";
 
 @media screen and (max-width: 600px) {
@@ -70,13 +70,18 @@
 }
 
 .header-container {
-  //background-color: $main-background-color;
+  background-color: rgba(185, 68, 26, 1);
   position: fixed;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   width: 100vw;
-  height: 14vh;
+  height: 10vh;
+  transition: background-color 0.3s;
+}
+
+.header-container.active {
+  background-color: $main-background-color;
 }
 
 h1 {
@@ -84,7 +89,7 @@ h1 {
   font-size: 50px;
   font-family: "Fasthand", cursive;
   font-weight: 200;
-  margin: 15px 80px;
+  margin: 0px 80px;
 }
 
 #menu-down {
@@ -101,7 +106,7 @@ h1 {
   justify-content: space-between;
   width: 31vw;
   height: 15vh;
-  margin: 30px 60px;
+  margin: 25px 60px;
 }
 
 li {

@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "../BodyCompo/Home";
 import { Portfolio } from "../BodyCompo/Portfolio";
-import { About } from "../BodyCompo/About/About";
+import { Contact } from "../BodyCompo/Contact/Contact";
 import { Shooting } from "../BodyCompo/Shooting/Shooting";
 
 export const PHTGRouter = () => {
@@ -13,7 +13,7 @@ export const PHTGRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/shooting" element={<Shooting />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>
   );

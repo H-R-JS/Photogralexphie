@@ -14,7 +14,7 @@ export const Shooting = () => {
             className="shooting-link"
           >
             Instagram
-          </Link>
+          </Link>{" "}
           .
         </p>
       </div>

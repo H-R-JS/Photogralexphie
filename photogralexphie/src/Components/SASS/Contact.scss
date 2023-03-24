@@ -5,8 +5,6 @@
     align-items: center;
     overflow: scroll;
     position: absolute;
-    top: 0px;
-    z-index: -1;
     width: 100vw;
     height: 100vh;
   }
@@ -37,7 +35,6 @@
   }
 
   .about-img {
-    background-image: url("../BodyCompo/About/profil_1.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 80vw;
@@ -45,44 +42,43 @@
   }
 }
 
-.about-page {
+.contact-page {
   display: flex;
   justify-content: center;
-  z-index: -1;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100vw;
+
+  text-align: center;
+}
+
+.contact-background {
+  @include img-background;
+  width: 34vw;
   height: 100vh;
 }
 
-.insta-logo {
-  width: 50px;
-  height: 50px;
+.contact-background.one {
+  grid-column: 1/2;
+  background-image: url("../BodyCompo/PortfImg/4Event/Section_event3.jpg");
 }
 
-.about-content {
-  display: grid;
-  grid-template-columns: 20px 32vw 80px 1fr 20px;
-  text-align: center;
-  margin-top: 120px;
-}
-
-.about-text {
-  grid-column: 4/5;
-  position: relative;
-  color: #fff;
-  background: linear-gradient(rgb(149, 152, 160), rgb(124, 146, 136));
-  font-size: 22px;
-  font-family: $main-font;
-  width: 50vw;
-  height: 60vh;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-.about-img {
+.contact-text {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   grid-column: 2/3;
-  background-image: url("../BodyCompo/About/profil_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 32vw;
-  height: 80vh;
+  color: #fff;
+  font-size: 22px;
+  font-family: $second-font;
+  margin-top: 100px;
+}
+
+.contact-background.two {
+  grid-column: 3/4;
+  background-image: url("../BodyCompo/PortfImg/3Solo/Section_solo3.jpg");
 }
