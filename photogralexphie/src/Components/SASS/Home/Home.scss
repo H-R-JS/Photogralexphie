@@ -19,6 +19,11 @@
     padding: 20px;
   }
 }
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .home-img-container {
   height: 100vh;
@@ -28,7 +33,7 @@
   background-color: #fff;
   background-image: url("../../BodyCompo/HomeImg/Section_animal.jpg");
   @include img-background;
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
 }
 
@@ -37,6 +42,7 @@
   flex-direction: column;
   align-items: center;
   color: #fff;
+  width: 50vw;
 }
 
 .home-content-part-one {
@@ -51,6 +57,7 @@
   display: flex;
   flex-direction: column;
   width: 20vw;
+
   h2 {
     background-color: rgb(185, 68, 26);
     font-size: 30px;
@@ -64,6 +71,8 @@
     font-family: "Recursive", sans-serif;
     font-size: 20px;
     width: 18vw;
+    min-width: 17em;
+
     margin-left: 20px;
   }
 }
@@ -76,10 +85,8 @@
 }
 
 .span-descript {
-  position: absolute;
   font-family: "Recursive", sans-serif;
-  right: 610px;
-  margin-top: 600px;
+  margin-top: 20px;
 }
 
 .home-content-part-two {
@@ -95,12 +102,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 50px;
   p {
     text-align: center;
     font-family: $second-font;
     font-size: 26px;
     width: 15vw;
+    min-width: 300px;
   }
 }
 .part-two-button {

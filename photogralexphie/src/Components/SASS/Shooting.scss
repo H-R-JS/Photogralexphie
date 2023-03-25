@@ -111,7 +111,68 @@
 .arrow-hover {
   font-size: 50px;
 }
-/*position: relative;
-  font-size: 50px;
-  top: 100px;
-  right: 40px;*/
+
+.shooting-img-container-one {
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 366px;
+  left: -600px;
+}
+
+.shooting-img-all {
+  width: 30vw;
+  height: 50vh;
+}
+
+.shooting-img-all.event-one {
+  background: url("../BodyCompo/PortfImg/4Event/Section_event2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 16.7vh;
+}
+.shooting-img-all .event-two {
+  background: url("../BodyCompo/PortfImg/4Event/Section_event1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 16.7vh;
+}
+.shooting-img-all.event-three {
+  background: url("../BodyCompo/PortfImg/4Event/Section_event4.jpg");
+  @include img-background;
+  height: 16.7vh;
+}
+
+.shooting-img-container-two {
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 366px;
+  right: -600px;
+}
+
+.shooting-img-all.one {
+  background: url("../BodyCompo/PortfImg/1Animals/Section_animal15.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 16.7vh;
+}
+.shooting-img-all.two {
+  background: url("../BodyCompo/PortfImg/3Solo/Section_solo16.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 16.7vh;
+}
+.shooting-img-all.three {
+  background: url("../BodyCompo/PortfImg/2Couple/Section_couple0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 16.7vh;
+}

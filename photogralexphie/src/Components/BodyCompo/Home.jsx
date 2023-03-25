@@ -6,7 +6,7 @@ const image = require("../BodyCompo/HomeImg/Section_animal_phone.jpg");
 
 export const Home = () => {
   return (
-    <section>
+    <section className="home-page">
       <div className="home-img-container ">
         <div className="home-img-home" />
       </div>
@@ -27,9 +27,16 @@ export const Home = () => {
               libre.
             </p>
           </div>
-
-          <div className="part-one-img" />
-          <span className="span-descript">( C'est moi )</span>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <div className="part-one-img" />
+            <span className="span-descript">( C'est moi )</span>
+          </div>
         </div>
         <div className="home-content-part-two">
           <div className="part-two-text">

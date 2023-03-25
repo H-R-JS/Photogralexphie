@@ -29,6 +29,11 @@ export const Shooting = () => {
           <span class="material-symbols-outlined arrow-hover" id="arrow-hover">
             arrow_selector_tool
           </span>
+          <div className="shooting-img-container-one">
+            <div className="shooting-img-all event-one" />
+            <div className="shooting-img-all event-two" />
+            <div className="shooting-img-all event-three" />
+          </div>
         </div>
         <div className="shooting-text event">
           <p>
@@ -39,6 +44,11 @@ export const Shooting = () => {
           <span class="material-symbols-outlined arrow-hover">
             arrow_selector_tool
           </span>
+          <div className="shooting-img-container-two">
+            <div className="shooting-img-all one" />
+            <div className="shooting-img-all two" />
+            <div className="shooting-img-all three" />
+          </div>
         </div>
       </div>
     </section>

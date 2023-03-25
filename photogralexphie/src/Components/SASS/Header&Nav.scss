@@ -70,7 +70,7 @@
 }
 
 .header-container {
-  background-color: rgba(185, 68, 26, 1);
+  background-color: rgba(185, 68, 26, 0);
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -104,9 +104,11 @@ h1 {
 .ul-menu {
   display: flex;
   justify-content: space-between;
+
   width: 31vw;
   height: 15vh;
   margin: 25px 60px;
+  max-margin: 25px 60px;
 }
 
 li {

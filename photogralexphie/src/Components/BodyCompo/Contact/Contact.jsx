@@ -7,13 +7,20 @@ export const Contact = () => {
       <div className="contact-content">
         <div className="contact-background one" />
         <div className="contact-text">
+          <h2>Un Shooting vous intéresse ? </h2>
           <p>
             Si vous souhaitez me contactez, il suffit de m'envoyer un message
             privée sur mon compte instagram.
             <br />
-            Me situant à l'ouest de Toulouse vers le Gers, on peut ensemble voir
-            l'endroit pour le shooting qui sera dans les horizons .{" "}
+            Me situant à l'ouest de Toulouse vers le Gers, le shooting se
+            situera dans les horizons .{" "}
           </p>
+          <Link
+            to="https://www.instagram.com/photogralexphie/"
+            className="icon-container"
+          >
+            <span className="icon-insta"></span>
+          </Link>
         </div>
         <div className="contact-background two" />
       </div>
