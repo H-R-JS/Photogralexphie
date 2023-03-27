@@ -1,8 +1,8 @@
 import React from "react";
 
 export const NavItems = [
-  { title: "Accueil", path: "/" },
-  { title: "Portfolio", path: "/portfolio" },
-  { title: "Shooting", path: "/shooting" },
-  { title: "Contact", path: "/contact" },
+  { title: "Accueil", path: "/", id: "0" },
+  { title: "Portfolio", path: "/portfolio", id: "1" },
+  { title: "Shooting", path: "/shooting", id: "2" },
+  { title: "Contact", path: "/contact", id: "3" },
 ];

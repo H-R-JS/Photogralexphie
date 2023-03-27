@@ -30,8 +30,9 @@
 
 .portf-page {
   display: flex;
-  justify-content: center;
-  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+
   height: 100vh;
   z-index: -1;
 }
@@ -39,13 +40,12 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 100vw;
-  padding: 20px;
+  width: 80vw;
   margin-top: 100px;
 }
 
 .portf-img {
-  margin-top: 10px;
+  margin: 50px 10px;
   background-size: cover;
   background-position: bottom center;
   width: 30vw;
@@ -56,6 +56,13 @@
 .portf-img.vertical {
   width: 20vw;
   height: 30vw;
+}
+
+.ligne-portf {
+  background-color: rgb(255, 255, 255);
+  width: 80vw;
+  height: 4px;
+  border-radius: 50px;
 }
 
 /*.portf-img.horizontal {
