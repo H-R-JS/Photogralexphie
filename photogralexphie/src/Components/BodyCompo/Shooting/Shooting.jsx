@@ -1,8 +1,14 @@
 import React from "react";
-import { ArrayImgShootingN, ArrayImgShootingE } from "./ArrayImgShooting";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Shooting = () => {
+  const variShooting = {
+    hidden: {},
+
+    show: {},
+  };
+
   return (
     <section className="shooting-page">
       <div className="shooting-descript-container">
@@ -20,13 +26,21 @@ export const Shooting = () => {
       </div>
 
       <div className="shooting-text-container">
-        <div className="shooting-text normal">
+        <motion.div
+          className="shooting-text normal"
+          variants={variShooting}
+          initial="hidden"
+          animate="visible"
+        >
           <p>
             Shooting Normal :<br />
             <br />
             <span className="span-price">30 €</span>
           </p>
-          <span class="material-symbols-outlined arrow-hover" id="arrow-hover">
+          <span
+            className="material-symbols-outlined arrow-hover"
+            id="arrow-hover"
+          >
             arrow_selector_tool
           </span>
           <div className="shooting-img-container-one">
@@ -34,14 +48,14 @@ export const Shooting = () => {
             <div className="shooting-img-all event-two" />
             <div className="shooting-img-all event-three" />
           </div>
-        </div>
+        </motion.div>
         <div className="shooting-text event">
           <p>
             Shooting Evenement :<br />
             <br />
             <span className="span-price">100 €</span>
           </p>
-          <span class="material-symbols-outlined arrow-hover">
+          <span className="material-symbols-outlined arrow-hover">
             arrow_selector_tool
           </span>
           <div className="shooting-img-container-two">

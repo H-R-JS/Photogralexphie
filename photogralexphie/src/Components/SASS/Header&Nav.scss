@@ -74,7 +74,6 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
   width: 100vw;
   height: 10vh;
   transition: background-color 0.3s;
@@ -104,15 +103,13 @@ h1 {
 .ul-menu {
   display: flex;
   justify-content: space-between;
-
   width: 31vw;
   height: 15vh;
   margin: 25px 60px;
-  max-margin: 25px 60px;
-}
-
-li {
-  list-style: none;
+  li {
+    height: 7vh;
+    list-style: none;
+  }
 }
 
 .link-menu {
@@ -126,8 +123,21 @@ li {
 
 .dropdown-container {
   position: absolute;
-  top: 10px;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $main-background-color;
+  width: 4vw;
+  height: 15vh;
+  top: 90px;
+}
+
+.dropdown-link {
+  font-family: $main-font;
+  font-size: 21px;
+  text-decoration: none;
+  color: #fff;
+  margin-left: -20px;
 }
 
 /*.link-menu::after {

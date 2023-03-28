@@ -56,15 +56,17 @@
 .shooting-descript-container {
   padding-top: 100px;
   padding-bottom: 20px;
-  background-color: #fff;
+  background-color: #181717;
   height: 15vh;
 }
 .shooting-descript {
+  background-color: #fff;
   color: #222;
   text-align: center;
   font-size: 26px;
   font-family: $main-font;
-  margin-top: 60px;
+  padding: 50px 0;
+  margin-top: 10px;
   .shooting-link {
     color: #222;
     cursor: pointer;
@@ -149,7 +151,7 @@
 .shooting-img-container-two {
   opacity: 1;
   position: absolute;
-  display: flex;
+  display: none;
   flex-direction: column;
   top: 366px;
   right: -600px;
