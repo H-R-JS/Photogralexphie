@@ -114,18 +114,35 @@
   font-size: 50px;
 }
 
-.shooting-img-container-one {
-  opacity: 1;
+.content-text {
+  opacity: 0;
   position: absolute;
+  background-color: $main-background-color;
+  font-size: 26px;
+  font-family: $second-font;
+  width: 28vw;
+  bottom: 170px;
+}
+.content-text.normal {
+  left: 275px;
+}
+.content-text.event {
+  right: 275px;
+}
+
+.shooting-img-container-one {
+  background-color: $main-background-color;
+  position: absolute;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   top: 366px;
-  left: -600px;
+  left: 256px;
 }
 
 .shooting-img-all {
   width: 30vw;
-  height: 50vh;
+  height: 17vh;
 }
 
 .shooting-img-all.event-one {
@@ -135,7 +152,7 @@
   background-position: center;
   height: 16.7vh;
 }
-.shooting-img-all .event-two {
+.shooting-img-all.event-two {
   background: url("../BodyCompo/PortfImg/4Event/Section_event1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -149,12 +166,12 @@
 }
 
 .shooting-img-container-two {
-  opacity: 1;
+  background-color: $main-background-color;
+  opacity: 0;
   position: absolute;
-  display: none;
+  display: flex;
   flex-direction: column;
   top: 366px;
-  right: -600px;
 }
 
 .shooting-img-all.one {

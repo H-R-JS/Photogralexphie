@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
 
 export const Shooting = () => {
-  const variShooting = {
-    hidden: {},
+  const imgNormalControls = useAnimation();
+  const imgEventControls = useAnimation();
 
-    show: {},
+  const variShooting = {
+    hidden: { opacity: 0 },
+    show: {
+      display: "flex",
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
   };
+
+  const variImg = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
+  useEffect(() => {
+    imgNormalControls.start("hidden");
+    imgEventControls.start("hidden");
+  }, [imgNormalControls, imgEventControls]);
 
   return (
     <section className="shooting-page">
@@ -26,11 +43,14 @@ export const Shooting = () => {
       </div>
 
       <div className="shooting-text-container">
-        <motion.div
+        <div
           className="shooting-text normal"
-          variants={variShooting}
-          initial="hidden"
-          animate="visible"
+          onMouseEnter={() => {
+            imgNormalControls.start("show");
+          }}
+          onMouseLeave={() => {
+            imgNormalControls.start("hidden");
+          }}
         >
           <p>
             Shooting Normal :<br />
@@ -43,13 +63,42 @@ export const Shooting = () => {
           >
             arrow_selector_tool
           </span>
-          <div className="shooting-img-container-one">
-            <div className="shooting-img-all event-one" />
-            <div className="shooting-img-all event-two" />
-            <div className="shooting-img-all event-three" />
-          </div>
-        </motion.div>
-        <div className="shooting-text event">
+          <motion.div
+            className="content-text normal"
+            variants={variImg}
+            animate={imgNormalControls}
+          >
+            Tel que les portraits, d'animaux, seul ou en couple, au total de 20
+            photos par shooting .
+          </motion.div>
+          <motion.div
+            className="shooting-img-container-one"
+            variants={variShooting}
+            animate={imgEventControls}
+          >
+            <motion.div
+              className="shooting-img-all event-one"
+              variants={variImg}
+            />
+            <motion.div
+              className="shooting-img-all event-two"
+              variants={variImg}
+            />
+            <motion.div
+              className="shooting-img-all event-three"
+              variants={variImg}
+            />
+          </motion.div>
+        </div>
+        <motion.div
+          className="shooting-text event"
+          onMouseEnter={() => {
+            imgEventControls.start("show");
+          }}
+          onMouseLeave={() => {
+            imgEventControls.start("hidden");
+          }}
+        >
           <p>
             Shooting Evenement :<br />
             <br />
@@ -58,12 +107,24 @@ export const Shooting = () => {
           <span className="material-symbols-outlined arrow-hover">
             arrow_selector_tool
           </span>
-          <div className="shooting-img-container-two">
-            <div className="shooting-img-all one" />
-            <div className="shooting-img-all two" />
-            <div className="shooting-img-all three" />
-          </div>
-        </div>
+          <motion.div
+            className="content-text event"
+            variants={variImg}
+            animate={imgEventControls}
+          >
+            Tel que les mariages, baptêmes ou anniversaires, au total de 25
+            photos par shooting .
+          </motion.div>
+          <motion.div
+            className="shooting-img-container-two"
+            variants={variShooting}
+            animate={imgNormalControls}
+          >
+            <motion.div className="shooting-img-all one" variants={variImg} />
+            <motion.div className="shooting-img-all two" variants={variImg} />
+            <motion.div className="shooting-img-all three" variants={variImg} />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

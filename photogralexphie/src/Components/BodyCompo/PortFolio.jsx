@@ -9,7 +9,7 @@ import {
 export const Portfolio = () => {
   return (
     <section className="portf-page">
-      <div className="portf-container">
+      <div className="portf-container" id="animals">
         {ArrayPortfImg1.map((item, index) => {
           return (
             <div
@@ -21,7 +21,7 @@ export const Portfolio = () => {
         })}
         <div className="ligne-portf" />
       </div>
-      <div className="portf-container">
+      <div className="portf-container" id="solo">
         {ArrayPortfImg2.map((item, index) => {
           return (
             <div
@@ -33,7 +33,7 @@ export const Portfolio = () => {
         })}
         <div className="ligne-portf" />
       </div>
-      <div className="portf-container">
+      <div className="portf-container" id="couple">
         {ArrayPortfImg3.map((item, index) => {
           return (
             <div
@@ -45,7 +45,7 @@ export const Portfolio = () => {
         })}
         <div className="ligne-portf" />
       </div>
-      <div className="portf-container">
+      <div className="portf-container" id="event">
         {ArrayPortfImg4.map((item, index) => {
           return (
             <div
@@ -59,8 +59,3 @@ export const Portfolio = () => {
     </section>
   );
 };
-/**{ArrayPortfImgV.map((item, index) => {
-          return (
-            <div key={index} src={item.src} className="portf-img vertical" />
-          );
-        })} */
