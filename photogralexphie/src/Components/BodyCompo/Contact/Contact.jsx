@@ -1,9 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
+  const variPageC = {
+    init: {
+      display: "none",
+      opacity: 0,
+    },
+
+    open: {
+      display: "block",
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        delay: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
   return (
-    <section className="contact-page">
+    <motion.section
+      variants={variPageC}
+      initial="init"
+      animate="open"
+      exit="hidden"
+      className="contact-page"
+    >
       <div className="contact-content">
         <div className="contact-background one" />
         <div className="contact-text">
@@ -24,7 +53,7 @@ export const Contact = () => {
         </div>
         <div className="contact-background two" />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

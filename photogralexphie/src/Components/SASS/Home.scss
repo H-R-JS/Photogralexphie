@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   .home-img-container {
     top: 0px;
     width: 100vw;
@@ -18,11 +18,12 @@
     width: 30vw;
     padding: 20px;
   }
-}
+}*/
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 98vw;
 }
 
 .home-img-container {
@@ -32,9 +33,9 @@
 }
 
 .home-img-home {
-  background-image: url("../../BodyCompo/HomeImg/Section_animal.jpg");
+  background-image: url("../BodyCompo/HomeImg/Section_animal.jpg");
   @include img-background;
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -46,24 +47,37 @@
   color: #fff;
   width: 100vw;
   height: 1600px;
-  margin-top: 980px;
 }
 
 .home-content-part-one {
+  background-color: red;
   display: flex;
   justify-content: space-between;
   width: 50vw;
-  height: 50vh;
+
   margin-top: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .home-content-part-one {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+
+    margin-top: 100px;
+  }
 }
 
 .part-one-text {
   display: flex;
   flex-direction: column;
   width: 20vw;
-
+  min-width: 22em;
   h2 {
-    background-color: rgb(185, 68, 26);
+    background-color: $main-background-color;
+    text-align: center;
     font-size: 30px;
     font-family: "Recursive", sans-serif;
     font-style: extrabold;
@@ -76,15 +90,21 @@
     font-size: 20px;
     width: 18vw;
     min-width: 17em;
-
     margin-left: 20px;
   }
 }
+.img-container-and-descript {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+}
 
 .part-one-img {
-  background-image: url("../../BodyCompo/Contact/profil_1.jpg");
+  background-image: url("../BodyCompo/Contact/profil_1.jpg");
   @include img-background;
   width: 20vw;
+  min-width: 300px;
   height: 60vh;
 }
 
@@ -94,19 +114,19 @@
 }
 
 .home-content-part-two {
+  background-color: green;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   width: 50vw;
-  height: 60vw;
-  margin-top: 0px;
+  min-width: 700px;
+  height: 100vh;
+  margin-top: 40px;
 }
 
 .part-two-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
   p {
     text-align: center;
     font-family: $second-font;
@@ -134,23 +154,47 @@
 
 .part-two-container-img {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
+  width: 55vw;
+  min-width: 700px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1370px) {
+  .home-content-part-two {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50vw;
+    min-width: 700px;
+    height: 100vh;
+    margin-top: 100px;
+  }
+  .part-two-container-img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 .part-two-img {
   width: 18vw;
+  min-width: 250px;
   height: 30vw;
+  min-height: 400px;
   @include img-background;
 }
 
 .part-two-img.one {
-  background-image: url("../../BodyCompo/HomeImg/Section_couple.jpg");
+  background-image: url("../BodyCompo/HomeImg/Section_couple.jpg");
 }
 
 .part-two-img.two {
-  background-image: url("../../BodyCompo/HomeImg/Section_animal0.jpg");
+  background-image: url("../BodyCompo/HomeImg/Section_animal0.jpg");
 }
 .part-two-img.three {
-  background-image: url("../../BodyCompo/HomeImg/Section_seul.jpg");
+  background-image: url("../BodyCompo/HomeImg/Section_seul.jpg");
 }

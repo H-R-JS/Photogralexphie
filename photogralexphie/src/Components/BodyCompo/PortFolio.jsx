@@ -5,10 +5,39 @@ import {
   ArrayPortfImg3,
   ArrayPortfImg4,
 } from "./PortfImg/ArrayPortfImg";
+import { motion } from "framer-motion";
 
 export const Portfolio = () => {
+  const variPageP = {
+    init: {
+      display: "none",
+      opacity: 0,
+    },
+
+    open: {
+      display: "flex",
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        delay: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
   return (
-    <section className="portf-page">
+    <motion.section
+      variants={variPageP}
+      initial="init"
+      animate="open"
+      exit="hidden"
+      className="portf-page"
+    >
       <div className="portf-container" id="animals">
         {ArrayPortfImg1.map((item, index) => {
           return (
@@ -56,6 +85,6 @@ export const Portfolio = () => {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 };

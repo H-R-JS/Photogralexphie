@@ -7,6 +7,28 @@ export const Shooting = () => {
   const imgNormalControls = useAnimation();
   const imgEventControls = useAnimation();
 
+  const variPageP = {
+    init: {
+      display: "none",
+      opacity: 0,
+    },
+
+    open: {
+      display: "block",
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        delay: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
   const variShooting = {
     hidden: { opacity: 0 },
     show: {
@@ -27,7 +49,13 @@ export const Shooting = () => {
   }, [imgNormalControls, imgEventControls]);
 
   return (
-    <section className="shooting-page">
+    <motion.section
+      variants={variPageP}
+      initial="init"
+      animate="open"
+      exit="hidden"
+      className="shooting-page"
+    >
       <div className="shooting-descript-container">
         <p className="shooting-descript">
           Je propose 2 types de shooting avec un prix différent, pour plus de
@@ -126,7 +154,7 @@ export const Shooting = () => {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
