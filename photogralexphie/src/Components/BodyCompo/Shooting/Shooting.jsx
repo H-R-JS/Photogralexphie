@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
+import { ShootingBox } from "./ArrayImgShooting";
 
 export const Shooting = () => {
   const imgNormalControls = useAnimation();
@@ -69,9 +70,40 @@ export const Shooting = () => {
           .
         </p>
       </div>
-
-      <div className="shooting-text-container">
-        <div
+      <div className="shooting-box-container">
+        {ShootingBox.map((item, index) => {
+          return (
+            <div key={index} className="shooting-box">
+              <div className="shooting-box-content">
+                <h3>{item.title}</h3>
+                <span>{item.price}</span>
+              </div>
+              <motion.div className="shooting-box-content-text">
+                {item.icon}
+                <p className="content-text">{item.text}</p>
+              </motion.div>
+              <motion.div className="shooting-box-img">
+                <div
+                  className="box-img one"
+                  style={{ backgroundImage: `url(${item.img1})` }}
+                />
+                <div
+                  className="box-img two"
+                  style={{ backgroundImage: `url(${item.img2})` }}
+                />
+                <div
+                  className="box-img three"
+                  style={{ backgroundImage: `url(${item.img3})` }}
+                />
+              </motion.div>
+            </div>
+          );
+        })}
+      </div>
+    </motion.section>
+  );
+};
+/** <div
           className="shooting-text normal"
           onMouseEnter={() => {
             imgNormalControls.start("show");
@@ -80,17 +112,20 @@ export const Shooting = () => {
             imgNormalControls.start("hidden");
           }}
         >
-          <p>
-            Shooting Normal :<br />
-            <br />
-            <span className="span-price">30 €</span>
-          </p>
-          <span
-            className="material-symbols-outlined arrow-hover"
-            id="arrow-hover"
-          >
-            arrow_selector_tool
-          </span>
+          <div className="in-text">
+            <p>
+              Shooting Normal :<br />
+              <br />
+              <span className="span-price">30 €</span>
+            </p>
+            <span
+              className="material-symbols-outlined arrow-hover"
+              id="arrow-hover"
+            >
+              arrow_selector_tool
+            </span>
+          </div>
+
           <motion.div
             className="content-text normal"
             variants={variImg}
@@ -127,14 +162,17 @@ export const Shooting = () => {
             imgEventControls.start("hidden");
           }}
         >
-          <p>
-            Shooting Evenement :<br />
-            <br />
-            <span className="span-price">100 €</span>
-          </p>
-          <span className="material-symbols-outlined arrow-hover">
-            arrow_selector_tool
-          </span>
+          <div className="in-text">
+            <p>
+              Shooting Evenement :<br />
+              <br />
+              <span className="span-price">100 €</span>
+            </p>
+            <span className="material-symbols-outlined arrow-hover">
+              arrow_selector_tool
+            </span>
+          </div>
+
           <motion.div
             className="content-text event"
             variants={variImg}
@@ -152,33 +190,4 @@ export const Shooting = () => {
             <motion.div className="shooting-img-all two" variants={variImg} />
             <motion.div className="shooting-img-all three" variants={variImg} />
           </motion.div>
-        </motion.div>
-      </div>
-    </motion.section>
-  );
-};
-
-/**<div className="shooting-container normal">
-        {ArrayImgShootingN.map((item, index) => {
-          console.log(item.img);
-          return (
-            <div
-              key={index}
-              className="shooting-img normal"
-              style={{ backgroundImage: `url(${item.img})` }}
-            ></div>
-          );
-        })}
-      </div>
-      <div className="shooting-container event">
-        {ArrayImgShootingE.map((item, index) => {
-          console.log(item.img);
-          return (
-            <div
-              key={index}
-              className="shooting-img event"
-              style={{ backgroundImage: `url(${item.img})` }}
-            ></div>
-          );
-        })}
-      </div> */
+        </motion.div>yuèuè */
