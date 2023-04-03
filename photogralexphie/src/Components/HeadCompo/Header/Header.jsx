@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "./Nav/Navbar";
+import { NavbarPhone } from "../HeaderPhone/NavPhone/NavbarPhone";
 
 export const Header = () => {
   const [nav, setNav] = useState(false);
@@ -15,10 +16,19 @@ export const Header = () => {
 
   window.addEventListener("scroll", changeBackground);
 
+  const media600 = window.matchMedia("(maw-width:600px)");
+
   return (
     <header className={nav ? "header-container active" : "header-container"}>
       <h1>Photogralexphie</h1>
-      <Navbar />
+      {() => {
+        if (media600) {
+          console.log("yeah");
+          return <NavbarPhone />;
+        } else {
+          return <Navbar />;
+        }
+      }}
     </header>
   );
 };

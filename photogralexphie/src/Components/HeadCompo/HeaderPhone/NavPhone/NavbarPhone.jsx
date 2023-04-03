@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { NavItems } from "./NavItems";
+import { NavItems } from "./NavItemsPhone";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
 
-export const Navbar = () => {
+export const NavbarPhone = () => {
   const menuToggle = useAnimation();
   const iconToggle = useAnimation();
   let ref = useRef();

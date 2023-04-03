@@ -5,9 +5,6 @@ import { useAnimation } from "framer-motion";
 import { ShootingBox } from "./ArrayImgShooting";
 
 export const Shooting = () => {
-  const imgNormalControls = useAnimation();
-  const imgEventControls = useAnimation();
-
   const variPageP = {
     init: {
       display: "none",
@@ -33,16 +30,18 @@ export const Shooting = () => {
   const variShooting = {
     hidden: { opacity: 0 },
     show: {
-      display: "flex",
+      display: "block",
       opacity: 1,
       transition: { staggerChildren: 0.2 },
     },
   };
 
-  const variImg = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
+  const antVariIcon = {
+    hidden: { opacity: 1 },
+    show: { opacity: 0 },
   };
+  const imgNormalControls = useAnimation();
+  const imgEventControls = useAnimation();
 
   useEffect(() => {
     imgNormalControls.start("hidden");
@@ -72,29 +71,50 @@ export const Shooting = () => {
       </div>
       <div className="shooting-box-container">
         {ShootingBox.map((item, index) => {
+          const imgControls =
+            index === 0 ? imgNormalControls : imgEventControls;
+          const imgControlsContainer =
+            index === 0 ? imgEventControls : imgNormalControls;
           return (
-            <div key={index} className="shooting-box">
+            <div
+              key={index}
+              className="shooting-box"
+              onMouseEnter={() => {
+                imgControls.start("show");
+                if (imgControls === imgNormalControls) {
+                  console.log("Normal");
+                } else {
+                  console.log("Event");
+                }
+              }}
+              onMouseLeave={() => {
+                imgControls.start("hidden");
+              }}
+            >
               <div className="shooting-box-content">
                 <h3>{item.title}</h3>
                 <span>{item.price}</span>
               </div>
-              <motion.div className="shooting-box-content-text">
-                {item.icon}
-                <p className="content-text">{item.text}</p>
-              </motion.div>
-              <motion.div className="shooting-box-img">
-                <div
-                  className="box-img one"
-                  style={{ backgroundImage: `url(${item.img1})` }}
-                />
-                <div
-                  className="box-img two"
-                  style={{ backgroundImage: `url(${item.img2})` }}
-                />
-                <div
-                  className="box-img three"
-                  style={{ backgroundImage: `url(${item.img3})` }}
-                />
+
+              <div className="shooting-box-content-text">
+                <motion.div variants={antVariIcon} animate={imgControls}>
+                  {item.icon}
+                </motion.div>
+
+                <motion.div
+                  variants={variShooting}
+                  animate={imgControls}
+                  className="content-text"
+                >
+                  {item.text}
+                </motion.div>
+              </div>
+              <motion.div
+                style={{ pointerEvents: "none" }}
+                variants={variShooting}
+                animate={imgControlsContainer}
+              >
+                {item.container}
               </motion.div>
             </div>
           );
@@ -103,7 +123,17 @@ export const Shooting = () => {
     </motion.section>
   );
 };
-/** <div
+
+/** 
+ * onMouseEnter={() => {
+                  if (imgControls === imgNormalControls) {
+                    console.log("Normal");
+                  } else {
+                    console.log("Event");
+                  }
+                }}
+ * 
+ * <div
           className="shooting-text normal"
           onMouseEnter={() => {
             imgNormalControls.start("show");

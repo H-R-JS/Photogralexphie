@@ -49,24 +49,6 @@
     font-family: $main-font;
     font-style: italic;
   }
-
-  /*.link-menu::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: right;
-    transition: transform 0.25 ease-out;
-  }
-
-  .link-menu:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }*/
 }
 
 .header-container {
@@ -103,7 +85,7 @@ h1 {
 .ul-menu {
   display: flex;
   justify-content: space-between;
-  width: 31vw;
+  width: 35vw;
   min-width: 500px;
   height: 15vh;
   margin: 25px 60px;
@@ -149,7 +131,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 10vh;
+    height: 180px;
     transition: background-color 0.3s;
   }
 

@@ -50,7 +50,6 @@
 }
 
 .home-content-part-one {
-  background-color: red;
   display: flex;
   justify-content: space-between;
   width: 50vw;
@@ -60,7 +59,6 @@
 
 @media screen and (max-width: 1000px) {
   .home-content-part-one {
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,10 +112,9 @@
 }
 
 .home-content-part-two {
-  background-color: green;
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 55vw;
   min-width: 700px;
   height: 100vh;
   margin-top: 40px;
@@ -162,24 +159,6 @@
   margin-top: 30px;
 }
 
-@media screen and (max-width: 1370px) {
-  .home-content-part-two {
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 50vw;
-    min-width: 700px;
-    height: 100vh;
-    margin-top: 100px;
-  }
-  .part-two-container-img {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-}
-
 .part-two-img {
   width: 18vw;
   min-width: 250px;
@@ -197,4 +176,21 @@
 }
 .part-two-img.three {
   background-image: url("../BodyCompo/HomeImg/Section_seul.jpg");
+}
+
+@media screen and (max-width: 1370px) {
+  .home-content-part-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50vw;
+    min-width: 700px;
+    height: 100vh;
+    margin-top: 100px;
+  }
+  .part-two-container-img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
