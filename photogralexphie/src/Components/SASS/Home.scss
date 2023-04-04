@@ -1,29 +1,8 @@
-/*@media screen and (max-width: 600px) {
-  .home-img-container {
-    top: 0px;
-    width: 100vw;
-    height: 500px;
-    z-index: -1;
-  }
-
-  .home-img {
-    font-size: 20px;
-    font-family: $main-font;
-    background-color: rgba(1, 1, 1, 0.5);
-  }
-
-  h2 {
-    color: #fff;
-    background-color: rgba(1, 1, 1, 0.5);
-    width: 30vw;
-    padding: 20px;
-  }
-}*/
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 98vw;
+  width: 98.2vw;
 }
 
 .home-img-container {
@@ -53,19 +32,7 @@
   display: flex;
   justify-content: space-between;
   width: 50vw;
-
   margin-top: 100px;
-}
-
-@media screen and (max-width: 1000px) {
-  .home-content-part-one {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 50vw;
-
-    margin-top: 100px;
-  }
 }
 
 .part-one-text {
@@ -178,6 +145,17 @@
   background-image: url("../BodyCompo/HomeImg/Section_seul.jpg");
 }
 
+@media screen and (max-width: 1000px) {
+  .home-content-part-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+
+    margin-top: 100px;
+  }
+}
+
 @media screen and (max-width: 1370px) {
   .home-content-part-two {
     display: flex;
@@ -192,5 +170,128 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .home-img-home {
+    background-image: url("../BodyCompo/HomeImg/Section_animal.jpg");
+    @include img-background;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .home-content-down {
+    background-color: #181717;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    width: 390px;
+    height: 1600px;
+  }
+  .home-content-part-one {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin: 100px 45px;
+  }
+
+  .part-one-text {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-width: 0;
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+      width: 270px;
+      min-width: 0;
+      margin-left: 20px;
+    }
+  }
+  .img-container-and-descript {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    min-width: 0px;
+    margin-top: 50px;
+  }
+  .home-content-part-two {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    min-width: 0px;
+    height: 160vh;
+    margin: 0px 45px;
+  }
+
+  .part-two-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+      font-family: $second-font;
+      font-size: 24px;
+      width: 15vw;
+      min-width: 300px;
+    }
+  }
+  .part-two-button {
+    background-color: rgb(185, 68, 26);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 28px;
+    font-family: $main-font;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0px 10px 0px rgb(134, 49, 18);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .part-two-button:hover {
+    transform: translateY(10px);
+    box-shadow: none;
+  }
+
+  .part-two-container-img {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 320px;
+    min-width: 0px;
+    margin-top: 30px;
+  }
+
+  .part-two-img {
+    width: 300px;
+    min-width: 0px;
+    height: 90vw;
+    min-height: 0px;
+    margin-top: 20px;
+    @include img-background;
+  }
+
+  .part-two-img.one {
+    background-image: url("../BodyCompo/HomeImg/Section_couple.jpg");
+  }
+
+  .part-two-img.two {
+    background-image: url("../BodyCompo/HomeImg/Section_animal0.jpg");
+  }
+  .part-two-img.three {
+    background-image: url("../BodyCompo/HomeImg/Section_seul.jpg");
   }
 }

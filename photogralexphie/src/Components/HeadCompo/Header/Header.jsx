@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "./Nav/Navbar";
-import { NavbarPhone } from "../HeaderPhone/NavPhone/NavbarPhone";
+import { NavbarPhone } from "./Nav/NavbarPhone";
+import Media from "react-media";
 
 export const Header = () => {
   const [nav, setNav] = useState(false);
@@ -21,14 +22,9 @@ export const Header = () => {
   return (
     <header className={nav ? "header-container active" : "header-container"}>
       <h1>Photogralexphie</h1>
-      {() => {
-        if (media600) {
-          console.log("yeah");
-          return <NavbarPhone />;
-        } else {
-          return <Navbar />;
-        }
-      }}
+      <Media query="(max-width: 1100px)">
+        {(matches) => (matches ? <NavbarPhone /> : <Navbar />)}
+      </Media>
     </header>
   );
 };

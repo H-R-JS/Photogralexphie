@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { NavItems } from "./NavItemsPhone";
+import { NavItems } from "./NavItems";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
@@ -37,8 +37,7 @@ export const NavbarPhone = () => {
         animate={iconToggle}
         onClick={() => {
           menuToggle.start({
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            display: "flex",
           });
           iconToggle.start({
             display: "none",
