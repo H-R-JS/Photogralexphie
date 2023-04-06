@@ -1,8 +1,8 @@
 import React from "react";
-import { ArrayImgShootingN, ArrayImgShootingE } from "./ArrayImgShooting";
+import { ShootingBoxPhone } from "./ArrayImgShooting";
 import { Link } from "react-router-dom";
 
-export const Shooting = () => {
+export const ShootingPhone = () => {
   return (
     <section className="shooting-page">
       <p className="shooting-descript">
@@ -16,37 +16,22 @@ export const Shooting = () => {
         </Link>
         .
       </p>
-      <div className="shooting-container normal">
-        {ArrayImgShootingN.map((item, index) => {
-          console.log(item.img);
+      <div className="shooting-box-container">
+        {ShootingBoxPhone.map((item, index) => {
           return (
-            <div
-              key={index}
-              className="shooting-img normal"
-              style={{ backgroundImage: `url(${item.img})` }}
-            ></div>
+            <div key={index} className="shooting-box">
+              <div className="shooting-box-content">
+                <h3>{item.title}</h3>
+                <span>{item.price}</span>
+              </div>
+
+              <div className="shooting-box-content-text">
+                <div className="content-text">{item.text}</div>
+              </div>
+              <div style={{ pointerEvents: "none" }}>{item.container}</div>
+            </div>
           );
         })}
-      </div>
-      <div className="shooting-text normal">
-        Shooting
-        <br /> Normal :<br /> 30 €
-      </div>
-      <div className="shooting-container event">
-        {ArrayImgShootingE.map((item, index) => {
-          console.log(item.img);
-          return (
-            <div
-              key={index}
-              className="shooting-img event"
-              style={{ backgroundImage: `url(${item.img})` }}
-            ></div>
-          );
-        })}
-      </div>
-      <div className="shooting-text event">
-        Shooting
-        <br /> Evenement :<br /> 100 €
       </div>
     </section>
   );

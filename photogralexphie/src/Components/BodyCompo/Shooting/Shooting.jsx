@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Media from "react-media";
 import { useAnimation } from "framer-motion";
 import { ShootingBox } from "./ArrayImgShooting";
+import { ShootingPhone } from "./ShootingPhone";
 
-export const Shooting = () => {
+const ShootingPC = () => {
   const variPageP = {
     init: {
       display: "none",
@@ -121,6 +123,14 @@ export const Shooting = () => {
         })}
       </div>
     </motion.section>
+  );
+};
+
+export const Shooting = () => {
+  return (
+    <Media query={"(min-width: 1400px)"}>
+      {(matches) => (matches ? <ShootingPC /> : <ShootingPhone />)}
+    </Media>
   );
 };
 
