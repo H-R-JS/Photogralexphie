@@ -7,14 +7,27 @@ import { useAnimation } from "framer-motion";
 export const NavbarPhone = () => {
   const menuToggle = useAnimation();
   const iconToggle = useAnimation();
+
+  const variantsPhoneMenu = {
+    hidden: {
+      x: 0,
+      display: "none",
+      opacity: 0,
+    },
+    show: {
+      x: -150,
+      display: "flex",
+      opacity: 1,
+    },
+  };
+
   let ref = useRef();
 
   useEffect(() => {
+    menuToggle.start("hidden");
     const ClickOutTarget = (e) => {
       if (!ref.current.contains(e.target)) {
-        menuToggle.start({
-          display: "none",
-        });
+        menuToggle.start("hidden");
         iconToggle.start({
           display: "block",
         });
@@ -36,9 +49,7 @@ export const NavbarPhone = () => {
         id="menu-down"
         animate={iconToggle}
         onClick={() => {
-          menuToggle.start({
-            display: "flex",
-          });
+          menuToggle.start("show");
           iconToggle.start({
             display: "none",
           });
@@ -46,7 +57,11 @@ export const NavbarPhone = () => {
       >
         menu
       </motion.span>
-      <motion.ul className="ul-menu" animate={menuToggle}>
+      <motion.ul
+        className="ul-menu"
+        variants={variantsPhoneMenu}
+        animate={menuToggle}
+      >
         {NavItems.map((item, index) => {
           return (
             <li key={index}>
