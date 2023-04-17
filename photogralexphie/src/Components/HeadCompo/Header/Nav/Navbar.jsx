@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { NavItems } from "./NavItems";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useAnimation } from "framer-motion";
+import { NavLink, Link } from "react-router-dom";
 import { DropDown } from "./DropDown/DropDown";
 
 export const Navbar = () => {
@@ -20,9 +18,9 @@ export const Navbar = () => {
                 onMouseEnter={() => setMenuDown(true)}
                 onMouseLeave={() => setMenuDown(false)}
               >
-                <Link to={item.path} className="link-menu">
+                <NavLink to={item.path} className="link-menu">
                   {item.title}
-                </Link>
+                </NavLink>
                 {menuDown && <DropDown />}
               </li>
             );
@@ -30,9 +28,9 @@ export const Navbar = () => {
 
           return (
             <li key={index}>
-              <Link to={item.path} className="link-menu">
+              <NavLink to={item.path} className="link-menu">
                 {item.title}
-              </Link>
+              </NavLink>
             </li>
           );
         })}
@@ -40,8 +38,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-/**<li key={index} onMouseEnter={() => setMenuDown(true)}  onMouseLeave={() => setMenuDown(false)}}>
-                  <Link to={item.path} className="link-menu">
-                    {item.title}
-                  </Link>
-                </li> */
