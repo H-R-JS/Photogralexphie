@@ -1,21 +1,49 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 80vh;
+}
+
+.box-container {
+  background-size: cover;
+  background-position: center bottom;
+  width: 350px;
+  height: 700px;
+  margin-top: 70px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.box-container:hover {
+  opacity: 0.5;
+}
+
+/**
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 98.2vw;
 }
-
 .home-img-container {
   display: block;
   z-index: -1;
-  height: 100vh;
+  height: 110vh;
 }
 
 .home-img-home {
   background-image: url("../BodyCompo/HomeImg/Section_animal.jpg");
   @include img-background;
   width: 100vw;
-  height: 1000px;
+  height: 1100px;
 }
 
 .home-content-down {
@@ -302,3 +330,4 @@
     background-image: url("../BodyCompo/HomeImg/Section_seul.jpg");
   }
 }
+*/

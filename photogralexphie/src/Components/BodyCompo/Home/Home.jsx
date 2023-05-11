@@ -1,10 +1,55 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { ArrayHome } from "./ArrayHome";
 
 export const Home = () => {
-  const variPageH = {
+  const variHomeContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.3,
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const variHomeChildren = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.4 } },
+  };
+
+  return (
+    <motion.section
+      variants={variHomeContainer}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      className="home-section"
+    >
+      <div className="home-container">
+        {ArrayHome.map((item, index) => {
+          return (
+            <motion.div key={index} variants={variHomeChildren}>
+              <div
+                className="box-container"
+                style={{ backgroundImage: `url(${item.img})` }}
+              />
+              <div className="box-container second" style={{ backgroundImage: `url(${item.img})` }} />
+              <div className="box-container third" style={{ backgroundImage: `url(${item.img})` }} />
+            </motion.div>
+          );
+        })}
+      </div>
+    </motion.section>
+  );
+};
+
+/**const variPageH = {
     init: {
       display: "none",
       opacity: 0,
@@ -74,5 +119,4 @@ export const Home = () => {
         </div>
       </div>
     </motion.section>
-  );
-};
+  ); */
