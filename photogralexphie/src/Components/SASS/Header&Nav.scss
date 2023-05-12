@@ -21,10 +21,10 @@
 
 h1 {
   color: #fff;
-  font-size: 50px;
-  font-family: "Fasthand", cursive;
-  font-weight: 200;
-  margin: 0px 80px;
+  font-size: 60px;
+  font-family: $font-main;
+  font-weight: 600;
+  margin: 5px 80px;
 }
 
 .ul-menu {
@@ -47,30 +47,35 @@ h1 {
   color: #fff;
   font-size: 36px;
   text-decoration: none;
-  font-family: "Satisfy", cursive;
+  font-family: $font-second;
   font-style: italic;
   padding-bottom: 5px;
   border-bottom-width: 0px;
   transition: all 0.2s;
 }
 
+.link-menu.active::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+}
+
 .link-menu.active {
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  /*border-image: linear-gradient(
-      rgba(255, 255, 255, 0.8) 99%,
-      rgba(231, 9, 9, 0)
-    )
-    1;*/
 }
 
 .li-drop {
-  margin-left: -25px;
-  box-shadow: 0px 0px 0px #fff;
+  margin-left: -45px;
+  background-color: #222;
+  text-align: center;
+  color: $color-background;
   transition: all 0.3s;
 }
 .li-drop:hover {
-  box-shadow: -15px 0px 0px rgba(255, 255, 255, 0.1);
+  background-color: #555;
 }
 
 .dropdown-container {
@@ -85,11 +90,8 @@ h1 {
 }
 
 .dropdown-link {
-  background-color: #333;
-  font-family: $main-font;
+  font-family: $font-main;
   font-size: 21px;
-  width: 800px;
-  padding-left: 10px;
   text-decoration: none;
   color: #fff;
 }

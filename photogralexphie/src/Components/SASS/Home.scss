@@ -18,12 +18,29 @@
   width: 350px;
   height: 700px;
   margin-top: 70px;
-  transition: opacity 0.3s;
+  box-shadow: 5px 2px 15px #121212;
+  transition: transform 0.3s;
   cursor: pointer;
 }
 
 .box-container:hover {
-  opacity: 0.5;
+  transform: translateY(-10px);
+}
+
+.box-container.second {
+  position: absolute;
+  width: 340px;
+  height: 680px;
+  top: 107px;
+  z-index: -5;
+}
+
+.box-container.third {
+  position: absolute;
+  width: 340px;
+  height: 660px;
+  top: 117px;
+  z-index: -6;
 }
 
 /**

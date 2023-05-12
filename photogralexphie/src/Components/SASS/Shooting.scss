@@ -13,8 +13,9 @@
   background-color: #fff;
   color: #222;
   text-align: center;
-  font-size: 26px;
-  font-family: $main-font;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: $font-main;
   padding: 50px 0;
   margin-top: 10px;
   .shooting-link {
@@ -50,7 +51,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-family: $main-font;
+  font-family: $font-main;
   font-size: 38px;
   height: 300px;
   h3 {
@@ -65,7 +66,7 @@
 .shooting-box-content-text {
   text-align: center;
   font-size: 26px;
-  font-family: $second-font;
+  font-family: $font-second;
   margin: 0 100px;
   span {
     display: inline-block;
@@ -75,7 +76,7 @@
 }
 
 .content-text {
-  background-color: $main-background-color;
+  background-color: $color-background;
   opacity: 0;
   margin-top: -50px;
   z-index: 2;
@@ -83,10 +84,10 @@
 .shooting-box-img {
   position: absolute;
   //background-color: green;
-  width: 700px;
+  width: 720px;
   height: 500px;
   top: 300px;
-
+  margin-left: -10px;
   .box-img {
     height: 200px;
     background-repeat: no-repeat;
@@ -124,7 +125,7 @@
     color: #222;
     text-align: center;
     font-size: 24px;
-    font-family: $main-font;
+    font-family: $font-main;
     padding: 50px 0;
     margin-top: 100px;
     .shooting-link {
@@ -163,7 +164,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-family: $main-font;
+    font-family: $font-main;
     font-size: 20px;
     height: 100px;
     z-index: 2;
@@ -179,7 +180,7 @@
   .shooting-box-content-text {
     text-align: center;
     font-size: 16px;
-    font-family: $second-font;
+    font-family: $font-second;
     width: 220px;
     margin: 60px 18px;
   }

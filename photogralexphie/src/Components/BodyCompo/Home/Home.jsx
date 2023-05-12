@@ -11,16 +11,11 @@ export const Home = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        delay: 0.3,
+        delay: 0.25,
         when: "beforeChildren",
         staggerChildren: 0.3,
       },
     },
-  };
-
-  const variHomeChildren = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.4 } },
   };
 
   return (
@@ -31,23 +26,37 @@ export const Home = () => {
       exit="hidden"
       className="home-section"
     >
-      <div className="home-container">
+      <ArrayHome />
+    </motion.section>
+  );
+};
+
+/**<div className="home-container">
         {ArrayHome.map((item, index) => {
           return (
             <motion.div key={index} variants={variHomeChildren}>
               <div
                 className="box-container"
                 style={{ backgroundImage: `url(${item.img})` }}
+                onMouseEnter={() => control.start("visible")}
+                onMouseLeave={() => control.start("hidden")}
               />
-              <div className="box-container second" style={{ backgroundImage: `url(${item.img})` }} />
-              <div className="box-container third" style={{ backgroundImage: `url(${item.img})` }} />
+              <motion.div
+                variants={variHChildrenBox2}
+                animate={control}
+                className="box-container second"
+                style={{ backgroundImage: `url(${item.img})` }}
+              />
+              <motion.div
+                variants={variHChildrenBox3}
+                animate={control}
+                className="box-container third"
+                style={{ backgroundImage: `url(${item.img})` }}
+              />
             </motion.div>
           );
         })}
-      </div>
-    </motion.section>
-  );
-};
+      </div> */
 
 /**const variPageH = {
     init: {
