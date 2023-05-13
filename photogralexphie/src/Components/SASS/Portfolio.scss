@@ -1,31 +1,42 @@
 .portf-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  height: 100vh;
+  overflow: hidden;
+  padding-top: 100px;
+  margin: 0 100px;
   z-index: -1;
 }
-.portf-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 80vw;
+
+.carousel {
+  overflow: hidden;
+  cursor: grab;
   margin-top: 100px;
+}
+
+.inner-carousel {
+  display: flex;
+}
+
+.item {
+  min-height: 40rem;
+  min-width: 30rem;
+  padding: 40px;
 }
 
 .portf-img {
   margin: 50px 10px;
   background-size: cover;
   background-position: bottom center;
-  width: 30vw;
-  height: 20vw;
+  height: 30vw;
+  min-width: 35vw;
   border-radius: 5px;
+  margin-top: 50px;
 }
 
 .portf-img.vertical {
-  width: 20vw;
-  height: 30vw;
+  min-width: 25vw;
+  min-height: 35vw;
+  margin-top: 0px;
 }
 
 .ligne-portf {
@@ -33,6 +44,7 @@
   width: 80vw;
   height: 4px;
   border-radius: 50px;
+  margin: 50px 0;
 }
 
 @media screen and (max-width: 750px) {
@@ -58,3 +70,11 @@
     height: 90vw;
   }
 }
+
+/**.portf-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin-top: 100px;
+}*/

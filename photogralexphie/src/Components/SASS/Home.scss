@@ -9,13 +9,13 @@
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  height: 80vh;
+  margin-top: 80px;
 }
 
 .box-container {
   background-size: cover;
   background-position: center bottom;
-  width: 350px;
+  width: 18.2vw;
   height: 700px;
   margin-top: 70px;
   box-shadow: 5px 2px 15px #121212;
@@ -29,7 +29,7 @@
 
 .box-container.second {
   position: absolute;
-  width: 340px;
+  width: 17.7vw;
   height: 680px;
   top: 107px;
   z-index: -5;
@@ -37,10 +37,30 @@
 
 .box-container.third {
   position: absolute;
-  width: 340px;
+  width: 17.6vw;
   height: 660px;
   top: 117px;
   z-index: -6;
+}
+
+@media screen and (max-width: 1715px) {
+  .box-container.second {
+    width: 17.4vw;
+  }
+
+  .box-container.third {
+    width: 17vw;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .box-container.second {
+    width: 14vw;
+  }
+
+  .box-container.third {
+    width: 12vw;
+  }
 }
 
 /**

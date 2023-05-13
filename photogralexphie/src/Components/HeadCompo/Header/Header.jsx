@@ -13,7 +13,6 @@ export const Header = () => {
     } else {
       setNav(false);
     }
-    console.log(nav);
   };
 
   const variHeader = {
