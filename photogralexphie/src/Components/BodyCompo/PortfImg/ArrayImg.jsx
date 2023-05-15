@@ -132,3 +132,10 @@ export const ArrayPortfImg4 = [
     class: "portf-img vertical",
   },
 ];
+
+export const ArrayImg = [
+  { array: ArrayPortfImg1, id: "animals" },
+  { array: ArrayPortfImg2, id: "solo" },
+  { array: ArrayPortfImg3, id: "couple" },
+  { array: ArrayPortfImg4, id: "event" },
+];

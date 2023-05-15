@@ -5,6 +5,7 @@ import { Home } from "../BodyCompo/Home/Home";
 import { Portfolio } from "../BodyCompo/Portfolio/Portfolio";
 import { Contact } from "../BodyCompo/Contact/Contact";
 import { Shooting } from "../BodyCompo/Shooting/Shooting";
+import { PortfArray } from "../BodyCompo/Portfolio/PortfArray";
 
 export const PHTGRouter = () => {
   const location = useLocation();

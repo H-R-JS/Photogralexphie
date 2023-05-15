@@ -1,12 +1,73 @@
-/*import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   ArrayPortfImg1,
   ArrayPortfImg2,
   ArrayPortfImg3,
   ArrayPortfImg4,
-} from "../PortfImg/ArrayPortfImg";
+} from "../PortfImg/ArrayImg";
+import { ArrayImg } from "../PortfImg/ArrayImg";
 import { motion } from "framer-motion";
 
+export const PortfArray = () => {
+  const [width1, setWidth1] = useState();
+  const [width2, setWidth2] = useState();
+  const [width3, setWidth3] = useState();
+  const [width4, setWidth4] = useState();
+
+  const arrayState = [width1, width2, width3, width4];
+
+  /*const handleRect = useCallback((node) => {
+    setWidth1(node.scrollWidth - node.offsetWidth);
+    setWidth2(node.scrollWidth - node.offsetWidth);
+    setWidth3(node.scrollWidth - node.offsetWidth);
+    setWidth4(node.scrollWidth - node.offsetWidth);
+    console.log(node.scrollWidth);
+  }, []);*/
+
+  useEffect(() => {
+    setWidth1(
+      refCarousel.current.scrollWidth - refCarousel.current.offsetWidth
+    );
+    console.log(refCarousel);
+  }, []);
+
+  const refCarousel = useRef([]);
+  //console.log(refCarousel);
+  console.log(arrayState[0]);
+  return (
+    <motion.div>
+      {ArrayImg.map((array, index) => {
+        return (
+          <motion.div
+            /*ref={carousel}*/ key={index}
+            ref={(el) => (refCarousel.current[index] = el)}
+            className="carousel"
+            id={array.id}
+          >
+            <motion.div
+              drag="x"
+              dragConstraints={{ right: 0, left: -arrayState[index] }}
+              className="inner-carousel"
+            >
+              {array.array.map((item, index) => {
+                return (
+                  <motion.div
+                    key={index}
+                    style={{ backgroundImage: `url(${item.src})` }}
+                    className={item.class}
+                  />
+                );
+              })}
+            </motion.div>
+            <div className="ligne-portf" />
+          </motion.div>
+        );
+      })}
+    </motion.div>
+  );
+};
+
+/*
 export const PortfArray = () => {
   const [width, setWidth] = useState();
   const carousel = useRef();
@@ -18,7 +79,8 @@ export const PortfArray = () => {
     console.log(carousel.current.style.width);
   }, []);
 
-  return (
+  return ()
+    
     <section>
       <motion.div ref={carousel} className="carousel" id="animals">
         <motion.div
