@@ -11,7 +11,7 @@ export const ArrayPortfImg1 = [
   },
   {
     src: require("./1Animals/Section_animal2.jpg"),
-    class: "portf-img vertical",
+    class: "portf-img horizontal",
   },
   {
     src: require("./1Animals/Section_animal3.jpg"),
@@ -31,7 +31,7 @@ export const ArrayPortfImg1 = [
   },
   {
     src: require("./1Animals/Section_animal7.jpg"),
-    class: "portf-img vertical",
+    class: "portf-img horizontal",
   },
   {
     src: require("./1Animals/Section_animal8.jpg"),
@@ -39,7 +39,7 @@ export const ArrayPortfImg1 = [
   },
   {
     src: require("./1Animals/Section_animal9.jpg"),
-    class: "portf-img horizontal",
+    class: "portf-img vertical",
   },
   {
     src: require("./1Animals/Section_animal10.jpg"),
@@ -63,11 +63,15 @@ export const ArrayPortfImg1 = [
   },
   {
     src: require("./1Animals/Section_animal15.jpg"),
-    class: "portf-img horizontal",
+    class: "portf-img vertical",
   },
   {
     src: require("./1Animals/Section_animal16.jpg"),
-    class: "portf-img vertical",
+    class: "portf-img horizontal",
+  },
+  {
+    src: require("./1Animals/Section_animal17.jpg"),
+    class: "portf-img horizontal",
   },
 ];
 
@@ -94,7 +98,7 @@ export const ArrayPortfImg2 = [
 export const ArrayPortfImg3 = [
   {
     src: require("./2Couple/Section_couple0.jpg"),
-    class: "portf-img horizontal",
+    class: "portf-img vertical",
   },
   {
     src: require("./2Couple/Section_couple1.jpg"),
@@ -106,7 +110,7 @@ export const ArrayPortfImg3 = [
   },
   {
     src: require("./2Couple/Section_couple3.jpg"),
-    class: "portf-img vertical",
+    class: "portf-img horizontal",
   },
 ];
 
