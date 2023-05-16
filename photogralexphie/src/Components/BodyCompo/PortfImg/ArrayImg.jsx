@@ -134,8 +134,8 @@ export const ArrayPortfImg4 = [
 ];
 
 export const ArrayImg = [
-  { array: ArrayPortfImg1, id: "animals" },
-  { array: ArrayPortfImg2, id: "solo" },
-  { array: ArrayPortfImg3, id: "couple" },
-  { array: ArrayPortfImg4, id: "event" },
+  { array: ArrayPortfImg1, id: "animals", title: "Animaux" },
+  { array: ArrayPortfImg2, id: "solo", title: "Solo" },
+  { array: ArrayPortfImg3, id: "couple", title: "Couple" },
+  { array: ArrayPortfImg4, id: "event", title: "Evenement" },
 ];

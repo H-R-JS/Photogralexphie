@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import {
-  ArrayPortfImg1,
-  ArrayPortfImg2,
-  ArrayPortfImg3,
-  ArrayPortfImg4,
-} from "../PortfImg/ArrayImg";
+
 import { ArrayImg } from "../PortfImg/ArrayImg";
 import { motion } from "framer-motion";
 
@@ -26,40 +21,49 @@ export const PortfArray = () => {
 
   useEffect(() => {
     setWidth1(
-      refCarousel.current.scrollWidth - refCarousel.current.offsetWidth
+      refCarousel.current[0].scrollWidth - refCarousel.current[0].offsetWidth
     );
-    console.log(refCarousel);
+    setWidth2(
+      refCarousel.current[1].scrollWidth - refCarousel.current[0].offsetWidth
+    );
+    setWidth3(
+      refCarousel.current[2].scrollWidth - refCarousel.current[0].offsetWidth
+    );
+    setWidth4(
+      refCarousel.current[3].scrollWidth - refCarousel.current[0].offsetWidth
+    );
   }, []);
 
   const refCarousel = useRef([]);
-  //console.log(refCarousel);
-  console.log(arrayState[0]);
+  console.log(arrayState[3]);
   return (
     <motion.div>
       {ArrayImg.map((array, index) => {
         return (
-          <motion.div
-            /*ref={carousel}*/ key={index}
-            ref={(el) => (refCarousel.current[index] = el)}
-            className="carousel"
-            id={array.id}
-          >
+          <motion.div key={index} className="carousel-container">
+            <h2 className="carousel-h2" id={array.id}>
+              {array.title}
+            </h2>
             <motion.div
-              drag="x"
-              dragConstraints={{ right: 0, left: -arrayState[index] }}
-              className="inner-carousel"
+              ref={(el) => (refCarousel.current[index] = el)}
+              className="carousel"
             >
-              {array.array.map((item, index) => {
-                return (
-                  <motion.div
-                    key={index}
-                    style={{ backgroundImage: `url(${item.src})` }}
-                    className={item.class}
-                  />
-                );
-              })}
+              <motion.div
+                drag="x"
+                dragConstraints={{ right: 0, left: -arrayState[index] }}
+                className="inner-carousel"
+              >
+                {array.array.map((item, index) => {
+                  return (
+                    <motion.div
+                      key={index}
+                      style={{ backgroundImage: `url(${item.src})` }}
+                      className={item.class}
+                    />
+                  );
+                })}
+              </motion.div>
             </motion.div>
-            <div className="ligne-portf" />
           </motion.div>
         );
       })}

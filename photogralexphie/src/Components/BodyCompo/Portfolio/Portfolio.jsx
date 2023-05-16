@@ -26,23 +26,6 @@ export const Portfolio = () => {
     },
   };
 
-  //const [width, setWidth] = useState();
-  // const carousel = useRef();
-
-  /*
-  // other solution to useEffect
-  const handleRect = useCallback((node) => {
-    setWidth(node.scrollWidth - node.offsetWidth);
-    console.log(node.scrollWidth);
-  }, []);
-
-  console.log(width);
-  */
-
-  // useEffect(() => {
-  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  // }, [carousel.current]);
-
   return (
     <motion.section
       variants={variPageP}

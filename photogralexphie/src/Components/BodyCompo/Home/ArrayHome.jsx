@@ -1,6 +1,6 @@
 import React from "react";
 import { useAnimation, motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 export const ArrayHome = () => {
   const control1 = useAnimation();
@@ -33,23 +33,31 @@ export const ArrayHome = () => {
 
   const ArrayHome = [
     {
-      to: "/portfolio",
+      to: "/portfolio#animals",
       img: require("./HomeImg/Section_animal_h.jpg"),
+      img1: require("./HomeImg/Section_animal_h1.jpg"),
+      img2: require("./HomeImg/Section_animal_h2.jpg"),
       animation: control1,
     },
     {
-      to: "/portfolio",
-      img: require("./HomeImg/Section_seul_h.jpg"),
+      to: "/portfolio#solo",
+      img: require("./HomeImg/Section_solo_h.jpg"),
+      img1: require("./HomeImg/Section_solo_h1.jpg"),
+      img2: require("./HomeImg/Section_solo_h2.jpg"),
       animation: control2,
     },
     {
-      to: "/portfolio",
+      to: "/portfolio#couple",
       img: require("./HomeImg/Section_couple_h.jpg"),
+      img1: require("./HomeImg/Section_couple_h1.jpg"),
+      img2: require("./HomeImg/Section_couple_h2.jpg"),
       animation: control3,
     },
     {
-      to: "/portfolio",
+      to: "/portfolio#event",
       img: require("./HomeImg/Section_event_h.jpg"),
+      img1: require("./HomeImg/Section_event_h1.jpg"),
+      img2: require("./HomeImg/Section_event_h2.jpg"),
       animation: control4,
     },
   ];
@@ -60,25 +68,25 @@ export const ArrayHome = () => {
         return (
           <motion.div key={index} variants={variHomeChildren}>
             <motion.div className="home-container-box">
-              <Link to="/contact">
+              <NavHashLink to={item.to}>
                 <div
                   className="box-container"
                   style={{ backgroundImage: `url(${item.img})` }}
                   onMouseEnter={() => item.animation.start("visible")}
                   onMouseLeave={() => item.animation.start("hidden")}
                 />
-              </Link>
+              </NavHashLink>
               <motion.div
                 variants={variHChildrenBox2}
                 animate={item.animation}
                 className="box-container second"
-                style={{ backgroundImage: `url(${item.img})` }}
+                style={{ backgroundImage: `url(${item.img1})` }}
               />
               <motion.div
                 variants={variHChildrenBox3}
                 animate={item.animation}
                 className="box-container third"
-                style={{ backgroundImage: `url(${item.img})` }}
+                style={{ backgroundImage: `url(${item.img2})` }}
               />
             </motion.div>
           </motion.div>
