@@ -47,6 +47,7 @@ export const PortfArray = () => {
             <motion.div
               ref={(el) => (refCarousel.current[index] = el)}
               className="carousel"
+              whileTap={{ cursor: "grabbing" }}
             >
               <motion.div
                 drag="x"
