@@ -100,21 +100,14 @@
     margin: 0 30px;
   }
 
+  .carousel {
+    margin-top: 50px;
+  }
+
   .carousel-h2 {
     font-size: 26px;
   }
 
-  .carousel-h2::before {
-    width: 100px;
-    margin-left: -150px;
-  }
-
-  .carousel-h2::after {
-    width: 100px;
-  }
-}
-
-@media screen and (max-width: 650px) {
   .carousel-h2::before {
     width: 50px;
     margin-left: -100px;

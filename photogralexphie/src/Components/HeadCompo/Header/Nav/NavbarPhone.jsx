@@ -34,9 +34,8 @@ export const NavbarPhone = () => {
         iconToggle.start({
           display: "block",
         });
-        console.log("clicked Outside");
       } else {
-        console.log("clicked Inside");
+        return null;
       }
     };
     document.addEventListener("click", ClickOutTarget);

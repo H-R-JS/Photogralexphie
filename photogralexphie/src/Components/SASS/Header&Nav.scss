@@ -181,17 +181,13 @@ h1 {
     transition: background-color 0.3s;
   }
   h1 {
-    color: #fff;
-    font-size: 30px;
-    font-family: "Fasthand", cursive;
-    font-weight: 200;
+    font-size: 32px;
     margin: 0px 20px;
   }
   .material-symbols-outlined {
     position: relative;
-    display: inline-block;
-    color: #fff;
     font-size: 40px;
+    bottom: 10px;
   }
 
   nav {
@@ -208,7 +204,6 @@ h1 {
     background-color: #222;
     display: none;
     position: relative;
-    justify-content: space-evenly;
     flex-direction: column;
     height: 110vh;
     top: 0px;
@@ -216,19 +211,19 @@ h1 {
     margin: 0;
   }
   li {
-    color: #111;
     height: 7vh;
     list-style: none;
     padding-left: 40px;
     padding-top: 10px;
     margin-left: -40px;
+    margin-top: -100px;
   }
   li:hover {
     background-color: #555;
   }
   .link-menu {
     color: #fff;
-    font-size: 30px;
+    font-size: 28px;
     text-decoration: none;
     font-family: "Satisfy", cursive;
     font-style: italic;
