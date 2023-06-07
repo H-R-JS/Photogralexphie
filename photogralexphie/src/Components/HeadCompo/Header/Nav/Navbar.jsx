@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavItems } from "./NavItems";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { DropDown } from "./DropDown/DropDown";
 
 export const Navbar = () => {

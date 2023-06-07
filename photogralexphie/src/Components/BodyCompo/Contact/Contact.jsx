@@ -33,8 +33,10 @@ export const Contact = () => {
       exit="hidden"
       className="contact-page"
     >
-      <div className="contact-content">
-        <div className="contact-background one" />
+      <article className="contact-content">
+        <figure>
+          <div className="contact-background one" />
+        </figure>
         <div className="contact-text">
           <h2>Un Shooting vous intéresse ? </h2>
           <p>
@@ -42,7 +44,7 @@ export const Contact = () => {
             privée sur mon compte instagram.
             <br />
             Me situant à l'ouest de Toulouse vers le Gers, le shooting se
-            situera dans les horizons .{" "}
+            situera dans les horizons .
           </p>
           <Link
             to="https://www.instagram.com/photogralexphie/"
@@ -51,32 +53,10 @@ export const Contact = () => {
             <span className="icon-insta"></span>
           </Link>
         </div>
-        <div className="contact-background two" />
-      </div>
+        <figure>
+          <div className="contact-background two" />
+        </figure>
+      </article>
     </motion.section>
   );
 };
-
-/**<p>
-            Je me présente je suis phototgraphe, et j'ai la passion de la
-            photographi car j'aime les photos. Je me présente je suis
-            phototgraphe, et j'ai la passion de la photographi car j'aime les
-            photos.Je me présente je suis phototgraphe, et j'ai la passion de la
-            photographi car j'aime les photos.Je me présente je suis
-            phototgraphe, et j'ai la passion de la photographi car j'aime les
-            photos.Je me présente je suis phototgraphe, et j'ai la passion de la
-            photographi car j'aime les photos.Je me présente je suis
-            phototgraphe, et j'ai la passion de la photographi car j'aime les
-            photos.Je me présente je suis phototgraphe, et j'ai la passion de la
-            photographi car j'aime les photos.Je me présente je suis
-            phototgraphe,
-            <br /> <br />
-            et j'ai la passion de la photographi car j'aime les photos.Je
-            <br /> et j'ai la passion de la photographi car j'aime les photos.Je
-            me présente je suis phototgraphe, et j'ai la passion de la
-            photographi car j'aime les photos. et j'ai la et j'ai la passion de
-            la photographi car j'aime les photos. passion de et j'ai la passion
-            de la photographi car j'aime les photos. la et j'ai la passion de la
-            photographi car j'aime les photos. photographi car et j'ai la
-            passion de la photographi car j'aime les photos. j'aime les photos.
-          </p> */

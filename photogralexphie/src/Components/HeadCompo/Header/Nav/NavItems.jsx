@@ -1,5 +1,3 @@
-import React from "react";
-
 export const NavItems = [
   { title: "Accueil", path: "/", id: "0" },
   { title: "Portfolio", path: "/portfolio", id: "1" },

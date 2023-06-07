@@ -1,6 +1,6 @@
 import React from "react";
 import { useAnimation, motion } from "framer-motion";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 
 export const ArrayHome = () => {
   const control1 = useAnimation();
@@ -63,35 +63,39 @@ export const ArrayHome = () => {
   ];
 
   return (
-    <div className="home-container">
+    <article className="home-container">
       {ArrayHome.map((item, index) => {
         return (
-          <motion.div key={index} variants={variHomeChildren}>
-            <motion.div className="home-container-box">
-              <NavHashLink to={item.to}>
-                <div
-                  className="box-container"
-                  style={{ backgroundImage: `url(${item.img})` }}
-                  onMouseEnter={() => item.animation.start("visible")}
-                  onMouseLeave={() => item.animation.start("hidden")}
-                />
-              </NavHashLink>
-              <motion.div
-                variants={variHChildrenBox2}
-                animate={item.animation}
-                className="box-container second"
-                style={{ backgroundImage: `url(${item.img1})` }}
+          <motion.figure
+            key={index}
+            variants={variHomeChildren}
+            className="home-container-box"
+          >
+            <HashLink to={item.to}>
+              <div
+                className="box-container"
+                style={{ backgroundImage: `url(${item.img})` }}
+                onMouseEnter={() => item.animation.start("visible")}
+                onMouseLeave={() => item.animation.start("hidden")}
               />
-              <motion.div
-                variants={variHChildrenBox3}
-                animate={item.animation}
-                className="box-container third"
-                style={{ backgroundImage: `url(${item.img2})` }}
-              />
-            </motion.div>
-          </motion.div>
+            </HashLink>
+            <motion.img
+              src={item.img1}
+              alt="Photo de photogralexphie"
+              variants={variHChildrenBox2}
+              animate={item.animation}
+              className="box-container second"
+            />
+            <motion.img
+              src={item.img2}
+              alt="Photo de photogralexphie"
+              variants={variHChildrenBox3}
+              animate={item.animation}
+              className="box-container third"
+            />
+          </motion.figure>
         );
       })}
-    </div>
+    </article>
   );
 };

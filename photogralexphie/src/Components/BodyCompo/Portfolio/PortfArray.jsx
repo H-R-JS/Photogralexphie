@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 import { ArrayImg } from "../PortfImg/ArrayImg";
 import { motion } from "framer-motion";
 
@@ -11,13 +10,17 @@ export const PortfArray = () => {
 
   const arrayState = [width1, width2, width3, width4];
 
-  /*const handleRect = useCallback((node) => {
+  /*
+  ///////////////////// Alternative 
+  const handleRect = useCallback((node) => {
     setWidth1(node.scrollWidth - node.offsetWidth);
     setWidth2(node.scrollWidth - node.offsetWidth);
     setWidth3(node.scrollWidth - node.offsetWidth);
     setWidth4(node.scrollWidth - node.offsetWidth);
     console.log(node.scrollWidth);
   }, []);*/
+
+  const refCarousel = useRef([]);
 
   useEffect(() => {
     setWidth1(
@@ -34,13 +37,11 @@ export const PortfArray = () => {
     );
   }, []);
 
-  const refCarousel = useRef([]);
-  console.log(arrayState[3]);
   return (
-    <motion.div>
+    <motion.article>
       {ArrayImg.map((array, index) => {
         return (
-          <motion.div key={index} className="carousel-container">
+          <motion.div key={index}>
             <h2 className="carousel-h2" id={array.id}>
               {array.title}
             </h2>
@@ -49,26 +50,24 @@ export const PortfArray = () => {
               className="carousel"
               whileTap={{ cursor: "grabbing" }}
             >
-              <motion.div
+              <motion.figure
                 drag="x"
                 dragConstraints={{ right: 0, left: -arrayState[index] }}
                 className="inner-carousel"
               >
                 {array.array.map((item, index) => {
                   return (
-                    <motion.div
-                      key={index}
-                      style={{ backgroundImage: `url(${item.src})` }}
-                      className={item.class}
-                    />
+                    <motion.figure key={index} className={item.class}>
+                      <img src={item.src} className="portf-img" />
+                    </motion.figure>
                   );
                 })}
-              </motion.div>
+              </motion.figure>
             </motion.div>
           </motion.div>
         );
       })}
-    </motion.div>
+    </motion.article>
   );
 };
 

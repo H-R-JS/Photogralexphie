@@ -58,7 +58,7 @@ const ShootingPC = () => {
       exit="hidden"
       className="shooting-page"
     >
-      <div className="shooting-descript-container">
+      <article className="shooting-descript-container">
         <p className="shooting-descript">
           Je propose 2 types de shooting avec un prix différent, pour plus de
           précision n'hésitez à pas à me contacter sur mon{" "}
@@ -70,8 +70,8 @@ const ShootingPC = () => {
           </Link>{" "}
           .
         </p>
-      </div>
-      <div className="shooting-box-container">
+      </article>
+      <article className="shooting-box-container">
         {ShootingBox.map((item, index) => {
           const imgControls =
             index === 0 ? imgNormalControls : imgEventControls;
@@ -121,7 +121,7 @@ const ShootingPC = () => {
             </div>
           );
         })}
-      </div>
+      </article>
     </motion.section>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export const ContainerImgNormal = () => {
   const variImg = {
@@ -8,29 +7,23 @@ export const ContainerImgNormal = () => {
     show: { opacity: 1 },
   };
   return (
-    <div className="shooting-box-img">
-      <motion.div
+    <figure className="shooting-box-img">
+      <motion.img
+        src={require("../PortfImg/4Event/Section_event2.jpg")}
         variants={variImg}
         className="box-img"
-        style={{
-          backgroundImage: `url(${require("../PortfImg/4Event/Section_event2.jpg")})`,
-        }}
       />
-      <motion.div
+      <motion.img
+        src={require("../PortfImg/4Event/Section_event1.jpg")}
         className="box-img"
         variants={variImg}
-        style={{
-          backgroundImage: `url(${require("../PortfImg/4Event/Section_event1.jpg")})`,
-        }}
       />
-      <motion.div
+      <motion.img
+        src={require("../PortfImg/4Event/Section_event4.jpg")}
         className="box-img"
         variants={variImg}
-        style={{
-          backgroundImage: `url(${require("../PortfImg/4Event/Section_event4.jpg")})`,
-        }}
       />
-    </div>
+    </figure>
   );
 };
 
@@ -40,28 +33,22 @@ export const ContainerImgEvent = () => {
     show: { opacity: 1 },
   };
   return (
-    <div className="shooting-box-img">
-      <motion.div
+    <figure className="shooting-box-img">
+      <motion.img
+        src={require("../PortfImg/1Animals/Section_animal15.jpg")}
         className="box-img"
         variants={variImg}
-        style={{
-          backgroundImage: `url(${require("../PortfImg/1Animals/Section_animal15.jpg")})`,
-        }}
       />
-      <motion.div
+      <motion.img
+        src={require("../PortfImg/3Solo/Section_solo16.jpg")}
         className="box-img"
         variants={variImg}
-        style={{
-          backgroundImage: `url(${require("../PortfImg/3Solo/Section_solo16.jpg")})`,
-        }}
       />
-      <motion.div
+      <motion.img
+        src={require("../PortfImg/2Couple/Section_couple0.jpg")}
         className="box-img"
         variants={variImg}
-        style={{
-          backgroundImage: `url(${require("../PortfImg/2Couple/Section_couple0.jpg")})`,
-        }}
       />
-    </div>
+    </figure>
   );
 };
