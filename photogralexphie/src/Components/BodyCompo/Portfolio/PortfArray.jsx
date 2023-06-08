@@ -10,16 +10,6 @@ export const PortfArray = () => {
 
   const arrayState = [width1, width2, width3, width4];
 
-  /*
-  ///////////////////// Alternative 
-  const handleRect = useCallback((node) => {
-    setWidth1(node.scrollWidth - node.offsetWidth);
-    setWidth2(node.scrollWidth - node.offsetWidth);
-    setWidth3(node.scrollWidth - node.offsetWidth);
-    setWidth4(node.scrollWidth - node.offsetWidth);
-    console.log(node.scrollWidth);
-  }, []);*/
-
   const refCarousel = useRef([]);
 
   useEffect(() => {
@@ -38,14 +28,14 @@ export const PortfArray = () => {
   }, []);
 
   return (
-    <motion.article>
+    <motion.section>
       {ArrayImg.map((array, index) => {
         return (
-          <motion.div key={index}>
+          <motion.article key={index}>
             <h2 className="carousel-h2" id={array.id}>
               {array.title}
             </h2>
-            <motion.div
+            <motion.section
               ref={(el) => (refCarousel.current[index] = el)}
               className="carousel"
               whileTap={{ cursor: "grabbing" }}
@@ -58,111 +48,19 @@ export const PortfArray = () => {
                 {array.array.map((item, index) => {
                   return (
                     <motion.figure key={index} className={item.class}>
-                      <img src={item.src} className="portf-img" />
+                      <img
+                        src={item.src}
+                        alt="Photo de photogralexphie"
+                        className="portf-img"
+                      />
                     </motion.figure>
                   );
                 })}
               </motion.figure>
-            </motion.div>
-          </motion.div>
+            </motion.section>
+          </motion.article>
         );
       })}
-    </motion.article>
+    </motion.section>
   );
 };
-
-/*
-export const PortfArray = () => {
-  const [width, setWidth] = useState();
-  const carousel = useRef();
-  // const widthCr = carousel.current;
-
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-    console.log(carousel.current.scrollWidth);
-    console.log(carousel.current.style.width);
-  }, []);
-
-  return ()
-    
-    <section>
-      <motion.div ref={carousel} className="carousel" id="animals">
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className="inner-carousel"
-        >
-          {ArrayPortfImg1.map((item, index) => {
-            return (
-              <motion.div
-                key={index}
-                style={{ backgroundImage: `url(${item.src})` }}
-                className={item.class}
-              />
-            );
-          })}
-        </motion.div>
-        <div className="ligne-portf" />
-      </motion.div>
-      <motion.div
-        drag="x"
-        dragConstraints={{ right: 0 }}
-        className="carousel"
-        id="solo"
-      >
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0 }}
-          className="inner-carousel"
-        >
-          {ArrayPortfImg2.map((item, index) => {
-            return (
-              <motion.div>
-                <div
-                  key={index}
-                  style={{ backgroundImage: `url(${item.src})` }}
-                  className={item.class}
-                />
-              </motion.div>
-            );
-          })}
-        </motion.div>
-        <div className="ligne-portf" />
-      </motion.div>
-      <motion.div className="carousel" id="couple">
-        <motion.div className="inner-carousel">
-          {ArrayPortfImg3.map((item, index) => {
-            return (
-              <motion.div>
-                <div
-                  key={index}
-                  style={{ backgroundImage: `url(${item.src})` }}
-                  className={item.class}
-                />
-              </motion.div>
-            );
-          })}
-        </motion.div>
-        <div className="ligne-portf" />
-      </motion.div>
-      <motion.div className="carousel" id="event">
-        <motion.div className="inner-carousel">
-          {ArrayPortfImg4.map((item, index) => {
-            return (
-              <motion.div className="item">
-                <div
-                  key={index}
-                  style={{ backgroundImage: `url(${item.src})` }}
-                  className={item.class}
-                />
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        <div className="ligne-portf" />
-      </motion.div>
-    </section>
-  );
-};
-*/

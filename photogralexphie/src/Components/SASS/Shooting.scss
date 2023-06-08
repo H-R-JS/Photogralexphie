@@ -9,6 +9,7 @@
   background-color: #181717;
   height: 15vh;
 }
+
 .shooting-descript {
   background-color: #fff;
   color: #222;
@@ -22,13 +23,6 @@
     color: #222;
     cursor: pointer;
   }
-}
-
-.shooting-container {
-  display: flex;
-  width: 350px;
-  height: 350px;
-  margin-top: 50px;
 }
 
 .shooting-box-container {
@@ -59,6 +53,7 @@
   span {
     font-size: 50px;
     font-weight: 800;
+    margin-bottom: 20px;
   }
 }
 
@@ -80,9 +75,9 @@
   margin-top: -50px;
   z-index: 2;
 }
+
 .shooting-box-img {
   position: absolute;
-  //background-color: green;
   width: 720px;
   height: 500px;
   top: 310px;
@@ -98,29 +93,12 @@
 @media screen and (max-width: 1400px) {
   .shooting-page {
     display: inline-block;
-    width: 100vw;
   }
 
   .shooting-descript {
-    background-color: #fff;
-    color: #222;
-    text-align: center;
     font-size: 24px;
-    font-family: $font-main;
-
     padding: 50px 20px;
     margin-top: 100px;
-    .shooting-link {
-      color: #222;
-      cursor: pointer;
-    }
-  }
-
-  .shooting-container {
-    display: flex;
-    width: 350px;
-    height: 350px;
-    margin-top: 50px;
   }
 
   .shooting-box-container {
@@ -134,8 +112,6 @@
 
   .shooting-box {
     background-color: #222;
-    color: #fff;
-    text-align: center;
     width: 250px;
     height: 200px;
     margin: 100px 70px;
@@ -143,27 +119,18 @@
   }
 
   .shooting-box-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     font-family: $font-main;
     font-size: 20px;
     height: 100px;
     z-index: 2;
-    h3 {
-      font-weight: 200;
-    }
     span {
       font-size: 26px;
-      font-weight: 800;
     }
   }
 
   .shooting-box-content-text {
-    text-align: center;
     font-size: 16px;
-    font-family: $font-second;
     width: 220px;
     margin: 60px 18px;
   }
@@ -182,13 +149,10 @@
     height: 250px;
     margin: 0px -25px;
     z-index: -1;
+  }
 
-    .box-img {
-      width: 200px;
-      height: 250px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
+  .box-img {
+    width: 200px;
+    height: 250px;
   }
 }

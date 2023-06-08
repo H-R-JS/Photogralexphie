@@ -26,18 +26,16 @@ export const Contact = () => {
   };
 
   return (
-    <motion.section
+    <motion.main
       variants={variPageC}
       initial="init"
       animate="open"
       exit="hidden"
       className="contact-page"
     >
-      <article className="contact-content">
-        <figure>
-          <div className="contact-background one" />
-        </figure>
-        <div className="contact-text">
+      <section className="contact-content">
+        <aside className="contact-background one" />
+        <article className="contact-text">
           <h2>Un Shooting vous intéresse ? </h2>
           <p>
             Si vous souhaitez me contactez, il suffit de m'envoyer un message
@@ -52,11 +50,9 @@ export const Contact = () => {
           >
             <span className="icon-insta"></span>
           </Link>
-        </div>
-        <figure>
-          <div className="contact-background two" />
-        </figure>
-      </article>
-    </motion.section>
+        </article>
+        <aside className="contact-background two" />
+      </section>
+    </motion.main>
   );
 };

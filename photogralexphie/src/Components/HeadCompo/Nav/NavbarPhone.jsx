@@ -47,8 +47,7 @@ export const NavbarPhone = () => {
   return (
     <nav ref={ref}>
       <motion.span
-        class="material-symbols-outlined"
-        id="menu-down"
+        class="material-symbols-outlined menu-icon"
         animate={iconToggle}
         onClick={() => {
           menuToggle.start("show");

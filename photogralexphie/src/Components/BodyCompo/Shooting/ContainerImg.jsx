@@ -10,16 +10,19 @@ export const ContainerImgNormal = () => {
     <figure className="shooting-box-img">
       <motion.img
         src={require("../PortfImg/4Event/Section_event2.jpg")}
+        alt="Photo de photogralexphie"
         variants={variImg}
         className="box-img"
       />
       <motion.img
         src={require("../PortfImg/4Event/Section_event1.jpg")}
+        alt="Photo de photogralexphie"
         className="box-img"
         variants={variImg}
       />
       <motion.img
         src={require("../PortfImg/4Event/Section_event4.jpg")}
+        alt="Photo de photogralexphie"
         className="box-img"
         variants={variImg}
       />

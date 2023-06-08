@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-
+import React from "react";
 import { motion } from "framer-motion";
 import { PortfArray } from "./PortfArray";
 
@@ -27,7 +26,7 @@ export const Portfolio = () => {
   };
 
   return (
-    <motion.section
+    <motion.main
       variants={variPageP}
       initial="init"
       animate="open"
@@ -35,6 +34,6 @@ export const Portfolio = () => {
       className="portf-page"
     >
       <PortfArray />
-    </motion.section>
+    </motion.main>
   );
 };

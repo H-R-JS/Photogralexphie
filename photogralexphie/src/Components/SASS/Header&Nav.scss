@@ -27,6 +27,10 @@ h1 {
   margin: 5px 80px;
 }
 
+.menu-icon {
+  display: none;
+}
+
 .ul-menu {
   display: flex;
   justify-content: space-between;
@@ -39,9 +43,6 @@ h1 {
     list-style: none;
   }
 }
-.material-symbols-outlined {
-  display: none;
-}
 
 .link-menu {
   color: #fff;
@@ -50,39 +51,7 @@ h1 {
   font-family: $font-second;
   font-style: italic;
   padding-bottom: 5px;
-
   transition: all 0.3s;
-}
-
-.link-menu::after {
-  content: "";
-  display: block;
-  background-color: #fff;
-  width: 100%;
-  height: 2px;
-  bottom: 15px;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: all 0.3s;
-}
-
-.link-menu.active::after {
-  transform: scaleX(1);
-}
-
-/*.link-menu.active {
-  border-bottom: 2px solid #fff;
-}*/
-
-.li-drop {
-  margin-left: -45px;
-  background-color: #222;
-  text-align: center;
-  color: $color-background;
-  transition: all 0.3s;
-}
-.li-drop:hover {
-  background-color: #555;
 }
 
 .dropdown-container {
@@ -96,6 +65,17 @@ h1 {
   top: 90px;
 }
 
+.li-drop {
+  margin-left: -45px;
+  background-color: #222;
+  text-align: center;
+  color: $color-background;
+  transition: all 0.3s;
+}
+.li-drop:hover {
+  background-color: #555;
+}
+
 .dropdown-link {
   font-family: $font-main;
   font-size: 21px;
@@ -106,21 +86,18 @@ h1 {
 // RESPONSIVE /////////////
 @media screen and (max-width: 1100px) {
   .header-container {
-    position: fixed;
-    display: flex;
     align-items: center;
-    width: 100vw;
-    height: 100px;
-    transition: background-color 0.3s;
   }
 
-  .material-symbols-outlined {
+  .menu-icon {
     position: relative;
     display: inline-block;
     color: #fff;
     font-size: 40px;
     margin-top: 40px;
+    cursor: pointer;
   }
+
   nav {
     position: fixed;
     display: flex;
@@ -130,10 +107,9 @@ h1 {
     width: 200px;
     height: 8vh;
   }
+
   h1 {
-    color: #fff;
     font-size: 50px;
-    font-family: "Fasthand", cursive;
     font-weight: 200;
     margin: 0px 60px;
   }
@@ -149,83 +125,60 @@ h1 {
     top: 0px;
     left: 250px;
     margin: 0;
-
-    li {
-      color: #111;
-      height: 7vh;
-      list-style: none;
-    }
   }
 
-  .dropdown-container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #222;
-    width: 80px;
-    height: 15vh;
-    top: 170px;
-  }
-}
-
-// PHONE /////////////
-@media screen and (max-width: 750px) {
-  .header-container {
-    background-color: rgba(185, 68, 26, 0);
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    height: 100px;
-    transition: background-color 0.3s;
-  }
-  h1 {
-    font-size: 32px;
-    margin: 0px 20px;
-  }
-  .material-symbols-outlined {
-    position: relative;
-    font-size: 40px;
-    bottom: 10px;
-  }
-
-  nav {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    top: 0px;
-    right: 0px;
-    width: 100px;
-    height: 80px;
-  }
-
-  .ul-menu {
-    background-color: #222;
-    display: none;
-    position: relative;
-    flex-direction: column;
-    height: 110vh;
-    top: 0px;
-    left: 300px;
-    margin: 0;
-  }
   li {
-    height: 7vh;
+    color: #111;
     list-style: none;
     padding-left: 40px;
     padding-top: 10px;
     margin-left: -40px;
     margin-top: -100px;
   }
+
   li:hover {
     background-color: #555;
   }
+
+  .dropdown-container {
+    background-color: #222;
+    width: 80px;
+    top: 170px;
+  }
+}
+
+// PHONE /////////////
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 32px;
+    margin: 0px 20px;
+  }
+  .menu-icon {
+    position: relative;
+    font-size: 40px;
+    bottom: 10px;
+  }
+
+  nav {
+    width: 100px;
+  }
+
+  .ul-menu {
+    left: 300px;
+  }
+
+  li {
+    padding-left: 40px;
+    padding-top: 10px;
+    margin-left: -40px;
+    margin-top: -100px;
+  }
+
+  li:hover {
+    background-color: #555;
+  }
+
   .link-menu {
-    color: #fff;
     font-size: 28px;
-    text-decoration: none;
-    font-family: "Satisfy", cursive;
-    font-style: italic;
   }
 }

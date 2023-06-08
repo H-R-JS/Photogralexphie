@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const ShootingPhone = () => {
   return (
-    <section className="shooting-page">
+    <main className="shooting-page">
       <p className="shooting-descript">
         Je propose 2 types de shooting avec un prix différent, pour plus de
         précision n'hésitez à pas à me contacter sur mon{" "}
@@ -16,23 +16,23 @@ export const ShootingPhone = () => {
         </Link>
         .
       </p>
-      <div className="shooting-box-container">
+      <section className="shooting-box-container">
         {ShootingBoxPhone.map((item, index) => {
           return (
-            <div key={index} className="shooting-box">
-              <div className="shooting-box-content">
+            <article key={index} className="shooting-box">
+              <p className="shooting-box-content">
                 <h3>{item.title}</h3>
                 <span>{item.price}</span>
-              </div>
+                {item.text}
+              </p>
 
-              <div className="shooting-box-content-text">
-                <div className="content-text">{item.text}</div>
-              </div>
-              <div style={{ pointerEvents: "none" }}>{item.container}</div>
-            </div>
+              <aside style={{ pointerEvents: "none" }}>{item.container}</aside>
+            </article>
           );
         })}
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
+
+/*<p className="shooting-box-content-text"></p>*/

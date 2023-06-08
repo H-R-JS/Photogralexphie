@@ -5,6 +5,7 @@ import Media from "react-media";
 import { useAnimation } from "framer-motion";
 import { ShootingBox } from "./ArrayImgShooting";
 import { ShootingPhone } from "./ShootingPhone";
+import { Icon } from "./ArrayImgShooting";
 
 const ShootingPC = () => {
   const variPageP = {
@@ -51,14 +52,14 @@ const ShootingPC = () => {
   }, [imgNormalControls, imgEventControls]);
 
   return (
-    <motion.section
+    <motion.main
       variants={variPageP}
       initial="init"
       animate="open"
       exit="hidden"
       className="shooting-page"
     >
-      <article className="shooting-descript-container">
+      <section className="shooting-descript-container">
         <p className="shooting-descript">
           Je propose 2 types de shooting avec un prix différent, pour plus de
           précision n'hésitez à pas à me contacter sur mon{" "}
@@ -70,15 +71,15 @@ const ShootingPC = () => {
           </Link>{" "}
           .
         </p>
-      </article>
-      <article className="shooting-box-container">
+      </section>
+      <section className="shooting-box-container">
         {ShootingBox.map((item, index) => {
           const imgControls =
             index === 0 ? imgNormalControls : imgEventControls;
           const imgControlsContainer =
             index === 0 ? imgEventControls : imgNormalControls;
           return (
-            <div
+            <article
               key={index}
               className="shooting-box"
               onMouseEnter={() => {
@@ -93,36 +94,36 @@ const ShootingPC = () => {
                 imgControls.start("hidden");
               }}
             >
-              <div className="shooting-box-content">
+              <section className="shooting-box-content">
                 <h3>{item.title}</h3>
                 <span>{item.price}</span>
-              </div>
+              </section>
 
-              <div className="shooting-box-content-text">
+              <section className="shooting-box-content-text">
                 <motion.div variants={antVariIcon} animate={imgControls}>
-                  {item.icon}
+                  <Icon />
                 </motion.div>
 
-                <motion.div
+                <motion.p
                   variants={variShooting}
                   animate={imgControls}
                   className="content-text"
                 >
                   {item.text}
-                </motion.div>
-              </div>
-              <motion.div
+                </motion.p>
+              </section>
+              <motion.aside
                 style={{ pointerEvents: "none" }}
                 variants={variShooting}
                 animate={imgControlsContainer}
               >
                 {item.container}
-              </motion.div>
-            </div>
+              </motion.aside>
+            </article>
           );
         })}
-      </article>
-    </motion.section>
+      </section>
+    </motion.main>
   );
 };
 

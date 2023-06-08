@@ -63,14 +63,10 @@ export const ArrayHome = () => {
   ];
 
   return (
-    <article className="home-container">
+    <section className="home-container">
       {ArrayHome.map((item, index) => {
         return (
-          <motion.figure
-            key={index}
-            variants={variHomeChildren}
-            className="home-container-box"
-          >
+          <motion.article key={index} variants={variHomeChildren}>
             <HashLink to={item.to}>
               <div
                 className="box-container"
@@ -93,9 +89,9 @@ export const ArrayHome = () => {
               animate={item.animation}
               className="box-container third"
             />
-          </motion.figure>
+          </motion.article>
         );
       })}
-    </article>
+    </section>
   );
 };

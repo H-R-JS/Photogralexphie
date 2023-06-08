@@ -17,7 +17,7 @@ export const Home = () => {
   };
 
   return (
-    <motion.section
+    <motion.main
       variants={variHomeContainer}
       initial="hidden"
       animate="visible"
@@ -25,6 +25,6 @@ export const Home = () => {
       className="home-section"
     >
       <ArrayHome />
-    </motion.section>
+    </motion.main>
   );
 };

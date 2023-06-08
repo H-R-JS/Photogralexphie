@@ -46,15 +46,7 @@
   display: flex;
 }
 
-/*.item {
-  min-height: 40rem;
-  min-width: 30rem;
-  padding: 40px;
-}*/
 .item {
-  // object-fit: center;
-  //background-size: cover;
-  // background-position: bottom center;
   height: 500px;
   min-width: 33vw;
   padding: 30px;
@@ -94,11 +86,6 @@
     min-width: 70vw;
     height: 70vw;
     border-radius: 5px;
-  }
-
-  .portf-img.vertical {
-    min-width: 50vw;
-    height: 90vw;
   }
 }
 
