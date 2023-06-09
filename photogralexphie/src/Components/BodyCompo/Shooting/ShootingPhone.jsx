@@ -1,5 +1,5 @@
 import React from "react";
-import { ShootingBoxPhone } from "./ArrayImgShooting";
+import { ShootingBox } from "./ArrayImgShooting";
 import { Link } from "react-router-dom";
 
 export const ShootingPhone = () => {
@@ -17,7 +17,7 @@ export const ShootingPhone = () => {
         .
       </p>
       <section className="shooting-box-container">
-        {ShootingBoxPhone.map((item, index) => {
+        {ShootingBox.map((item, index) => {
           return (
             <article key={index} className="shooting-box">
               <p className="shooting-box-content">
@@ -26,7 +26,9 @@ export const ShootingPhone = () => {
                 {item.text}
               </p>
 
-              <aside style={{ pointerEvents: "none" }}>{item.container}</aside>
+              <aside style={{ pointerEvents: "none" }}>
+                {item.containerPhone}
+              </aside>
             </article>
           );
         })}

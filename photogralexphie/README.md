@@ -7,3 +7,7 @@ setWidth3(node.scrollWidth - node.offsetWidth);
 setWidth4(node.scrollWidth - node.offsetWidth);
 console.log(node.scrollWidth);
 }, []);
+
+/////////////////////////////////////////////////////////////////////////
+
+const media600 = window.matchMedia("(maw-width:600px)");

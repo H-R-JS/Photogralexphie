@@ -21,7 +21,7 @@ export const ContainerImgNormal = () => {
         variants={variImg}
       />
       <motion.img
-        src={require("../PortfImg/4Event/Section_event4.jpg")}
+        src={require("../PortfImg/4Event/Section_event3.jpg")}
         alt="Photo de photogralexphie"
         className="box-img"
         variants={variImg}
@@ -38,17 +38,17 @@ export const ContainerImgEvent = () => {
   return (
     <figure className="shooting-box-img">
       <motion.img
-        src={require("../PortfImg/1Animals/Section_animal15.jpg")}
+        src={require("../PortfImg/1Animals/Section_animal2.jpg")}
         className="box-img"
         variants={variImg}
       />
       <motion.img
-        src={require("../PortfImg/3Solo/Section_solo16.jpg")}
+        src={require("../PortfImg/3Solo/Section_solo3.jpg")}
         className="box-img"
         variants={variImg}
       />
       <motion.img
-        src={require("../PortfImg/2Couple/Section_couple0.jpg")}
+        src={require("../PortfImg/2Couple/Section_couple1.jpg")}
         className="box-img"
         variants={variImg}
       />

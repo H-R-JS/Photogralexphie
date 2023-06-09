@@ -85,9 +85,8 @@ const ShootingPC = () => {
               onMouseEnter={() => {
                 imgControls.start("show");
                 if (imgControls === imgNormalControls) {
-                  console.log("Normal");
                 } else {
-                  console.log("Event");
+                  return null;
                 }
               }}
               onMouseLeave={() => {

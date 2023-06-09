@@ -15,26 +15,13 @@ export const ShootingBox = [
     price: "30 €",
     text: "Tel que les portraits d'animaux, personne seul ou en couple, au total de 20 photos par shooting .",
     container: <ContainerImgNormal />,
+    containerPhone: <ContainerImgEvent />,
   },
   {
     title: "Shooting Evenement",
     price: "100 €",
     text: "Tel que les mariages, baptêmes ou anniversaires, au total de 25 photos par shooting .",
     container: <ContainerImgEvent />,
-  },
-];
-
-export const ShootingBoxPhone = [
-  {
-    title: "Shooting Normal",
-    price: "30 €",
-    text: "Tel que les portraits, d'animaux, seul ou en couple, au total de 20 sphotos par shooting .",
-    container: <ContainerImgEvent />,
-  },
-  {
-    title: "Shooting Evenement",
-    price: "100€",
-    text: "Tel que les mariages, baptêmes ou anniversaires, au total de 25 photos par shooting .",
-    container: <ContainerImgNormal />,
+    containerPhone: <ContainerImgNormal />,
   },
 ];

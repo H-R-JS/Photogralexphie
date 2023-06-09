@@ -87,7 +87,7 @@
 
 @media screen and (max-width: 616px) {
   .home-section {
-    height: 1950px;
+    height: 1000px;
     margin-bottom: 150px;
   }
 
@@ -95,5 +95,12 @@
     min-width: 250px;
     height: 420px;
     margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .home-section {
+    height: 2050px;
+    margin-bottom: 160px;
   }
 }

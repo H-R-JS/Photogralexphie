@@ -48,15 +48,15 @@
 
 .item {
   height: 500px;
-  min-width: 33vw;
+  min-width: 700px;
   padding: 30px;
   border-radius: 5px;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .item.vertical {
-  min-width: 23vw;
-  min-height: 35vw;
+  min-width: 450px;
+  min-height: 650px;
   margin-top: 0px;
 }
 
@@ -79,17 +79,6 @@
 }
 
 @media screen and (max-width: 750px) {
-  .portf-img {
-    margin: 50px 10px;
-    background-size: cover;
-    background-position: bottom center;
-    min-width: 70vw;
-    height: 70vw;
-    border-radius: 5px;
-  }
-}
-
-@media screen and (max-width: 650px) {
   .portf-page {
     margin: 0 30px;
   }
@@ -111,5 +100,16 @@
   .carousel-h2::after {
     width: 50px;
     margin-top: 20px;
+  }
+
+  .item {
+    height: 200px;
+    min-width: 260px;
+    padding: 10px;
+  }
+
+  .item.vertical {
+    min-width: 200px;
+    min-height: 300px;
   }
 }

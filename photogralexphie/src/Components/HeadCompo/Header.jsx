@@ -3,6 +3,7 @@ import { Navbar } from "./Nav/Navbar";
 import { NavbarPhone } from "./Nav/NavbarPhone";
 import { motion } from "framer-motion";
 import Media from "react-media";
+import { useLocation } from "react-router-dom";
 
 export const Header = () => {
   const [nav, setNav] = useState(false);
@@ -34,8 +35,6 @@ export const Header = () => {
   };
 
   window.addEventListener("scroll", changeBackground);
-
-  //const media600 = window.matchMedia("(maw-width:600px)");
 
   return (
     <motion.header
