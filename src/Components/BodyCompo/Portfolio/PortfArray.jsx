@@ -50,7 +50,7 @@ export const PortfArray = () => {
                     <motion.figure key={index} className={item.class}>
                       <img
                         src={item.src}
-                        alt="Photo de photogralexphie"
+                        alt="photogralexphie"
                         className="portf-img"
                       />
                     </motion.figure>

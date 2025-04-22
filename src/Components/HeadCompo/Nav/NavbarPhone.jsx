@@ -31,7 +31,7 @@ export const NavbarPhone = () => {
     const ClickOutTarget = (e) => {
       if (
         !ref.current.contains(e.target) ||
-        e.target.href == window.location.href
+        e.target.href === window.location.href
       ) {
         menuToggle.start("hidden");
         iconToggle.start({
@@ -45,7 +45,7 @@ export const NavbarPhone = () => {
     return () => {
       document.removeEventListener("click", ClickOutTarget);
     };
-  }, []);
+  }, [iconToggle, menuToggle]);
 
   return (
     <nav ref={ref}>
