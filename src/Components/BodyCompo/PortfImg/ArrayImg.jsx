@@ -1,5 +1,3 @@
-import React from "react";
-
 export const ArrayPortfImg1 = [
   {
     src: require("./1Animals/Section_animal0.jpg"),
