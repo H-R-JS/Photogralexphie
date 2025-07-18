@@ -8,11 +8,11 @@ export const Header = () => {
   const [nav, setNav] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 60) {
+    /* if (window.scrollY >= 60) {
       setNav(true);
     } else {
       setNav(false);
-    }
+    }*/
   };
 
   const variHeader = {
@@ -42,7 +42,7 @@ export const Header = () => {
       animate="visible"
       className={nav ? "header-container active" : "header-container"}
     >
-      <motion.h1 variants={variHeaderChildren}>Photogralexphie</motion.h1>
+      <motion.h1 variants={variHeaderChildren}>PHOTOGRALEXPHIE</motion.h1>
       <motion.div variants={variHeaderChildren}>
         <Media query="(max-width: 1100px)">
           {(matches) => (matches ? <NavbarPhone /> : <Navbar />)}

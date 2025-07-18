@@ -1,7 +1,10 @@
-$font-main: "Caveat", cursive;
-$font-second: "Indie Flower", cursive;
+$font-main: "Montserrat", sans-serif;
+$font-second: "Lato", sans-serif;
 
-$color-background: #181717;
+//"Caveat", cursive;
+//"Indie Flower", cursive;
+
+$color-main: #ba907a;
 
 @mixin img-background {
   background-repeat: no-repeat;
@@ -11,7 +14,7 @@ $color-background: #181717;
 
 body {
   margin: 0;
-  background-color: #181717;
+  background-color: #fff;
 }
 
 figure {

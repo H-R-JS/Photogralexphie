@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrayHome } from "./ArrayHome";
+import { Presentation } from "./Presentation";
+import { AboutMe } from "./AboutMe";
 
 export const Home = () => {
   const variHomeContainer = {
@@ -24,7 +25,8 @@ export const Home = () => {
       exit="hidden"
       className="home-section"
     >
-      <ArrayHome />
+      <Presentation />
+      <AboutMe />
     </motion.main>
   );
 };
