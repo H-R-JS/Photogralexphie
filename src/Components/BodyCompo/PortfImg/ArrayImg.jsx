@@ -135,9 +135,47 @@ export const ArrayPortfImg4 = [
   },
 ];
 
-export const ArrayImg = [
+/*export const ArrayImg = [
   { array: ArrayPortfImg1, id: "animals", title: "Animaux" },
   { array: ArrayPortfImg2, id: "solo", title: "Solo" },
   { array: ArrayPortfImg3, id: "couple", title: "Couple" },
   { array: ArrayPortfImg4, id: "event", title: "Evenement" },
+];*/
+
+export const ArrayImg1 = [
+  { src: require("./imgsV2/imgV2_1.jpeg") },
+  { src: require("./imgsV2/imgV2_2.jpeg") },
+  { src: require("./imgsV2/imgV2_3.jpeg") },
+  { src: require("./imgsV2/imgV2_4.jpeg") },
+];
+
+export const ArrayImg2 = [
+  { src: require("./imgsV2/imgV2_5.jpeg") },
+  { src: require("./imgsV2/imgV2_6.jpeg") },
+  { src: require("./imgsV2/imgV2_7.jpeg") },
+  { src: require("./imgsV2/imgV2_8.jpeg") },
+  { src: require("./imgsV2/imgV2_9.jpeg") },
+];
+
+export const ArrayImg3 = [
+  { src: require("./imgsV2/imgV2_10.jpeg") },
+  { src: require("./imgsV2/imgV2_11.jpeg") },
+  { src: require("./imgsV2/imgV2_12.jpeg") },
+  { src: require("./imgsV2/imgV2_13.jpeg") },
+  { src: require("./imgsV2/imgV2_14.jpeg") },
+];
+
+export const ArrayImg4 = [
+  { src: require("./imgsV2/imgV2_15.jpeg") },
+  { src: require("./imgsV2/imgV2_16.jpeg") },
+  { src: require("./imgsV2/imgV2_17.jpeg") },
+  { src: require("./imgsV2/imgV2_18.jpeg") },
+  { src: require("./imgsV2/imgV2_19.jpeg") },
+];
+
+export const ArrayImg5 = [
+  { src: require("./imgsV2/imgV2_20.jpeg") },
+  { src: require("./imgsV2/imgV2_21.jpeg") },
+  { src: require("./imgsV2/imgV2_22.jpeg") },
+  { src: require("./imgsV2/imgV2_23.jpeg") },
 ];

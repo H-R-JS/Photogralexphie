@@ -1,27 +1,18 @@
 import React, { useState } from "react";
 import { NavItems } from "./NavItems";
 import { NavLink } from "react-router-dom";
-import { DropDown } from "./DropDown/DropDown";
 
 export const Navbar = () => {
-  const [menuDown, setMenuDown] = useState(false);
-
   return (
     <nav>
       <ul className="ul-menu">
         {NavItems.map((item, index) => {
           if (item.id === "1") {
-            console.log();
             return (
-              <li
-                key={index}
-                onMouseEnter={() => setMenuDown(true)}
-                onMouseLeave={() => setMenuDown(false)}
-              >
+              <li key={index}>
                 <NavLink to={item.path} className="link-menu">
                   {item.title}
                 </NavLink>
-                {menuDown && <DropDown />}
               </li>
             );
           }
